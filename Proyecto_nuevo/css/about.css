@@ -1,5 +1,5 @@
- /* ABOUT AREA*/
- .about-area {
+/* ABOUT AREA*/
+.about-area {
     background: rgba(0, 0, 0, 0) url("../img/about/home_three_about_bg.png") no-repeat scroll center bottom / contain;
     position: relative;
     height: 69%;
@@ -40,10 +40,10 @@
     color: #4a4d4f;
 }
 
-.about-parrafo{
+.about-parrafo {
     column-count: 2;
     column-gap: 30px;
     margin: 40px 100px;
 }
 
-/*END ABOUT AREA*/    
+/*END ABOUT AREA*/
