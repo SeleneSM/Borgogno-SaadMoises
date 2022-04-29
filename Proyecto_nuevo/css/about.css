@@ -1,0 +1,49 @@
+ /* ABOUT AREA*/
+ .about-area {
+    background: rgba(0, 0, 0, 0) url("../img/about/home_three_about_bg.png") no-repeat scroll center bottom / contain;
+    position: relative;
+    height: 69%;
+}
+
+.about-author-sign {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.big-text {
+    float: left;
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: -4px;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.about-area .area-title h2 {
+    font-size: 80px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.about-area .area-title h2 span {
+    color: #212324;
+    font-family: lato;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.about-area .area-title h2::after {
+    display: none;
+}
+
+.about-content {
+    color: #4a4d4f;
+}
+
+.about-parrafo{
+    column-count: 2;
+    column-gap: 30px;
+    margin: 40px 100px;
+}
+
+/*END ABOUT AREA*/    
