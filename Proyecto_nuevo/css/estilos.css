@@ -224,7 +224,7 @@ html, body {
         color: rgb(255, 255, 255);
 /*         position: relative; */
         width: 500%;
-        top: 40%;
+        top: 30%;
         text-align: center;
         animation: 30s slidy infinite; 
         overflow: hidden;
@@ -240,12 +240,54 @@ html, body {
         overflow: hidden;
     }
 
+    .slider-area h1 {
+        font-size: 65px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .slider-area h1 span {
+        font-weight: 700;
+    }
+    
+    .slider-area h2 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 82px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+    
+    .slider-area h3 {
+        font-family: lato;
+        font-weight: 700;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+    }
+    
+    .slider-area h3 a,
+    a.home-reservation-button {
+        border: 1px solid;
+        color: #fff;
+        display: inline-block;
+        font-size: 13px;
+        margin-top: 15px;
+        padding: 10px 30px;
+    }
+    
+    .slider-area h3 a:hover,
+    a.home-reservation-button:hover {
+        color: #fff;
+        background: #ca3d26 none repeat scroll 0 0;
+        border-color: #ca3d26;
+    }
+    
     /*END SLIDE AREA*/
 
     /*MENU AREA*/
 
     .menus-area {
-        position: absolute;
+        position: relative;
         width: 100%;
         z-index: -1;
 
@@ -296,6 +338,13 @@ html, body {
         padding-left: 140px;
         position: relative;
     }
+    .food-img-1 img{
+        transition: all 1s;
+    }
+    .food-img-1:hover img{
+        transform:scale(1.40);
+        box-shadow: 0 0 5px 5px #ca3d26
+    }
     
     .food-menu-img {
         border-radius: 50%;
@@ -304,8 +353,6 @@ html, body {
         overflow: hidden;
         position: absolute;
         top: 10%;
-        width: 100px;
-        -webkit-box-shadow: 0 0 0 10px #ddd;
         box-shadow: 0 0 0 10px #ddd;
     }
     
@@ -499,3 +546,42 @@ menu-food .menu-food-pennal li span {
     margin: 6px 80px;
 }
     /*END MENU 2 AREA*/
+
+    /*------------------------------
+    10. FOOTER AREA
+-------------------------------*/
+
+.footer-area {
+    background: #191a1b ;
+    color: #cacaca;
+    letter-spacing: 1px;
+    position: relative;
+    height: 40%;
+}
+
+.footer-content{
+    padding-top: 3%;
+}
+
+
+.footer-area a {
+    color: #ca3d26;
+}
+
+.footer-area a:hover {
+    color: #fff;
+}
+
+.footer-logo,
+.footer-address {
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+
