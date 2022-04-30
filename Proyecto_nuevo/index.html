@@ -38,9 +38,9 @@
                         <li class="nav-link active"><a class="nav-link" href="#slider">Home</a></li>
                         <li class="nav-link"><a class="nav-link" href="#menu">Menus</a></li>
                         <li class="nav-link"><a class="nav-link" href="#reservation">Reserva tu mesa</a></li>
-                        <li class="nav-link"><a class="nav-link" href="about.html">Sobre Nosotros</a>
-                        </li>
                         <li class="nav-link"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-link"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
+                        <li class="nav-link"><a class="nav-link" href="about.html#team">Equipo</a></li>
                     </ul>
                 </div>
             </nav>
@@ -70,7 +70,7 @@
                             <span>Giovanni</span> Restaurante vegano
                         </h1>
                         <h3 class="pogoSlider-slide-element">
-                            <a href="#reservation-form-modal">Reserva ahora</a>
+                            <a href="#reservation">Reserva ahora</a>
                         </h3>
                     </div>
                     <div class="pogoSlider-slide">
@@ -88,7 +88,7 @@
                             <span>disfrutar </span> con nosotros?
                         </h1>
                         <h3 class="pogoSlider-slide-element">
-                            <a href="#reservation-form-modal">Reservar mesa</a>
+                            <a href="#reservation">Reservar mesa</a>
                         </h3>
                     </div>
                     <div class="pogoSlider-slide">
@@ -106,7 +106,7 @@
                             <span>Giovanni</span> Restaurante vegano
                         </h1>
                         <h3 class="pogoSlider-slide-element">
-                            <a href="#reservation-form-modal">Reserva ahora</a>
+                            <a href="#reservation">Reserva ahora</a>
                         </h3>
                     </div>
                 </div>
@@ -215,6 +215,67 @@
             </div>
     </section>
 
+    <section class="form" id="reservation">
+    <div class="form_wrap" >
+
+        <section class="cantact_info">
+            <section class="info_title">
+                <span class="fa fa-user-circle"></span>
+                <h2>
+                    <P>RESERVA TU</P>MESA AHORA
+                </h2>
+            </section>
+        </section>
+
+        <form class="form_reserva">
+            <h2>Reservar para:</h2>
+            <div class="user_info">
+                <div class="columnas-form">
+                    
+                        <p>
+                            <label for="names">Nombre</label>
+                            <input type="text" id="names" placeholder="Nombre...">
+                        </p>
+                        <p>
+                            <label for="phone">Telefono / Celular</label>
+                            <input type="number" id="phone" placeholder="Numero de contacto...">
+                        </p>
+                        <p>
+                            <label for="email">Correo electronico</label>
+                            <input type="email" id="email" placeholder="ejemplo@gmail.com">
+                        </p>
+                    
+                        <p>
+                            <label for="fecha">Fecha</label>
+                            <input type="date" id="fecha">
+                        </p>
+                        <p>
+                            <label for="hora">Hora</label>
+                            <input type="time" id="hora">
+                        </p>
+                        <p>
+                            <label for="personas">Cantidad de Personas:</label>
+                            <input type="number" id="personas" placeholder="Cantidad de Personas:">
+<!--                             <label for="personas">Cantidad de personas:</label>
+                            <select id="servicio">
+                                <option value="uno">1 Persona</option>
+                                <option value="dos">2 Personas</option>
+                                <option value="tres">3 Personas</option>
+                                <option value="cuatro">4 Personas</option>
+                                <option value="cinco">5 Personas</option>
+                            </select> -->
+                        </p>
+                 
+                </div>
+                ¿Decidieron que van a comer? <input type="radio" name="comida" value="si" id="si"> <label for="si">Si</label>
+                <input type="radio" name="comida" value="no" id="no" ><label for="no">Decidir en el Local</label>
+                <br>
+                <input type="button" value="Reservar Mesa" id="btnSend">
+            </div>
+        </form>
+
+    </div>
+</section>
     <!--FOOER AREA-->
 
     <footer class="footer area">

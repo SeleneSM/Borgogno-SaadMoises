@@ -137,8 +137,9 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 5;
     position: fixed;
+    font-weight: bold;
     
   }
 
@@ -147,7 +148,7 @@ html, body {
     height: 8%;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    z-index: 0;
+    z-index: 1;
     margin: 0 0 0 0;
     position: fixed;
   }
@@ -194,7 +195,7 @@ html, body {
         background-color: #1a1a1a;
         opacity: 73%;
         width: 100%;  height: 100%;
-        z-index: 1;
+        z-index: 3;
         background-image: url("../img/pattarn.png");
         background-repeat: repeat;
 
@@ -212,6 +213,7 @@ html, body {
       text-align: left;
       font-size: 0;
       animation: 30s slidy infinite; 
+      z-index: 2;
     }
 /*     .slider-area{
         position: absolute;
@@ -224,7 +226,7 @@ html, body {
         color: rgb(255, 255, 255);
 /*         position: relative; */
         width: 500%;
-        top: 30%;
+        top: 25%;
         text-align: center;
         animation: 30s slidy infinite; 
         overflow: hidden;
@@ -290,6 +292,8 @@ html, body {
         position: relative;
         width: 100%;
         z-index: -1;
+        padding-top: 4%;
+        
 
     }
     
@@ -546,6 +550,179 @@ menu-food .menu-food-pennal li span {
     margin: 6px 80px;
 }
     /*END MENU 2 AREA*/
+
+
+  
+  /* FORMULARIO =================================== */
+  .form{
+      height: 100%;
+      padding-top: 2%;
+  }
+  .form_wrap{
+      width: 1050px;
+      height: 530px;
+      margin: 50px auto;
+      display: flex;
+      z-index: -5;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Informacion de Contacto*/
+  
+  .cantact_info::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+    
+      position: absolute;
+      top: 0;
+      left: 0;
+  
+      background: #ca3d26;
+      opacity: 0.9;
+  }
+  
+  .cantact_info{
+      width: 38%;
+      position: relative;
+z-index: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      background-image: url('../fondo.jpg');
+      background-size: cover;
+      background-position: center center;
+  
+  }
+  
+  .info_title/* ,
+  .info_items */{
+      position: relative;
+      z-index: 2;
+      color: #fff;
+  }
+  
+  .info_title{
+      margin-bottom: 60px;
+  }
+  
+  .info_title span{
+      font-size: 100px;
+      display: block;
+      text-align: center;
+      margin-bottom: 15px;
+  }
+  
+  .info_title h2{
+      font-size: 35px;
+      text-align: center;
+  }
+  
+/*   .info_items p{
+      display: flex;
+      align-items: center;
+  
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+  }
+  
+  .info_items p:nth-child(1) span{
+      font-size: 30px;
+      margin-right: 10px;
+  }
+  
+  .info_items p:nth-child(2) span{
+      font-size: 50px;
+      margin-right: 15px;
+      margin-left: 4px;
+  } */
+  
+  
+  /* Formulario de contacto*/
+  form.form_reserva{
+      width: 62%;
+      padding: 30px 40px;
+      
+      
+    
+  }
+  
+  form.form_reserva h2{
+      font-size: 25px;
+      font-weight: 600;
+      color: #303030;
+      margin-bottom: 30px;
+  }
+
+  
+  
+  form.form_reserva .user_info{
+    display:block; 
+      
+
+      
+  }
+  .columnas-form{
+    column-count: 2;
+    
+  }
+  
+  form.form_reserva label{
+      font-weight: 600;
+  }
+  
+  form.form_reserva input,
+  form.form_reserva option{
+      width: 100%;
+      padding: 8px 0px 5px;
+      margin-bottom: 20px;
+  
+      border: none;
+      border-bottom: 2px solid #D1D1D1;
+  
+      font-family: 'Open sans';
+      color: #5A5A5A;
+      font-size: 14px;
+      font-weight: 400;
+  }
+  
+  form.form_reserva option{
+      max-width: 100%;
+      min-width: 100%;
+      max-height: 90px;
+  }
+  form.form_reserva input[type="radio"]{
+      width: 3%;
+  }
+  form.form_reserva input[type="button"]{
+      width: 180px;
+      background: #ca3d26;
+      padding: 10px;
+      border: none;
+      border-radius: 25px;
+  
+      align-self: flex-end;
+  
+      color: #fff;
+      font-family: 'Open sans';
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 1s;
+  }
+  
+  form.form_reserva input[type="button"]:hover{
+      transform: scale(1.15);
+  }
+  
+
+  
 
     /*------------------------------
     10. FOOTER AREA
