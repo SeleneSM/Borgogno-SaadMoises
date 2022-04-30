@@ -391,7 +391,7 @@ a.home-reservation-button:hover {
 
 .food-img-1:hover img {
     transform: scale(1.2);
-    box-shadow: 0 0 5px 5px #ca3d26
+    box-shadow: 0 0 0 5px #ca3d26
 }
 
 .food-menu-img {
