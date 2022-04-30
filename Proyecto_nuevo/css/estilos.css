@@ -763,7 +763,7 @@ form.form_reserva input[type="radio"] {
     width: 3%;
 }
 
-form.form_reserva input[type="button"] {
+form.form_reserva button[type="button"] {
     width: 180px;
     background: #fff;
     padding: 10px;
@@ -782,7 +782,7 @@ form.form_reserva input[type="button"] {
     transition: all 500ms;
 }
 
-form.form_reserva input[type="button"]:hover {
+form.form_reserva button[type="button"]:hover {
     transform: scale(1.1);
     background: #ca3d26;
     color: #fff;
