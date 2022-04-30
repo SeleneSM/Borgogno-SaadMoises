@@ -8,7 +8,7 @@
     <meta name="author" content="Borgogno-Saad Moisés" />
 
     <!--====== TAG DEL TÍTULO  ======-->
-    <title>Restaurant Giovanni</title>
+    <title>Restaurante UCC</title>
 
     <!--====== ICONO DEL FAVICON =======-->
     <link rel="shortcut icon" type="image/ico" href="img/favicon.png" />
@@ -22,6 +22,8 @@
 </head>
 
 <body>
+
+
     <header>
 
         <!-- AREA DE HOME SLIDER -->
@@ -67,7 +69,7 @@
                             <p>Bienvenido a</p>
                         </h2>
                         <h1 class="pogoSlider-slide-element">
-                            <span>Giovanni</span> Restaurante vegano
+                            <span>UCC</span> Restaurante vegano
                         </h1>
                         <h3 class="pogoSlider-slide-element">
                             <a href="#reservation">Reserva ahora</a>
@@ -103,7 +105,7 @@
                             <p>Bienvenido a</p>
                         </h2>
                         <h1 class="pogoSlider-slide-element">
-                            <span>Giovanni</span> Restaurante vegano
+                            <span>UCC</span> Restaurante vegano
                         </h1>
                         <h3 class="pogoSlider-slide-element">
                             <a href="#reservation">Reserva ahora</a>
@@ -215,23 +217,65 @@
             </div>
     </section>
 
+        <!-- /*-----------------------------------------------------------
+    Formulario que esta oculto, debe aparecer cuando usemos js 
+    sera visible cuando clickeen el boton "Reservar Mesa"
+-----------------------------------------------------------*/ -->
+
+<section class="formparajs" id="formparajs">
+    <div>
+        <label for="menu_1">
+            <p>Risotto: </p>
+        </label>
+        <input type="number" id="menu_1" placeholder="Cantidad de Platos">
+        <label for="menu_2">
+            <p>Hamburguesas: </p>
+        </label>
+        <input type="number" id="menu_2" placeholder="Cantidad de Platos">
+        <label for="menu_3">
+            <p>Cheeseecake: </p>
+        </label>
+        <input type="number" id="menu_3" placeholder="Cantidad de Platos">
+        <label for="menu_4">
+            <p>Wrap: </p>
+        </label>
+        <input type="number" id="menu_4" placeholder="Cantidad de Platos">
+        <label for="menu_5">
+            <p>Sushi: </p>
+        </label>
+        <input type="number" id="menu_5" placeholder="Cantidad de Platos">
+        <label for="menu_6">
+            <p>Tiramisu: </p>
+        </label>
+        <input type="number" id="menu_6" placeholder="Cantidad de Platos">
+        <div>
+            <p>
+                <button value="Cerrar">Cerrar</button>
+                <button value="Reservar">Reservar</button>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Fin del formulario oculto -->
+
     <section class="form" id="reservation">
-    <div class="form_wrap" >
+        <div class="form_wrap">
 
-        <section class="cantact_info">
-            <section class="info_title">
-                <span class="fa fa-user-circle"></span>
-                <h2>
-                    <P>RESERVA TU</P>MESA AHORA
-                </h2>
+            <section class="cantact_info">
+                <section class="info_title">
+                    <span class="fa fa-user-circle"></span>
+                    <h2>
+                        <P>RESERVA TU</P>MESA AHORA
+                    </h2>
+                </section>
             </section>
-        </section>
 
-        <form class="form_reserva">
-            <h2>Reservar para:</h2>
-            <div class="user_info">
-                <div class="columnas-form">
-                    
+            <form class="form_reserva">
+                <h2>Reservar para:</h2>
+                <div class="user_info">
+                    <div class="columnas-form">
+
                         <p>
                             <label for="names">Nombre</label>
                             <input type="text" id="names" placeholder="Nombre...">
@@ -244,7 +288,7 @@
                             <label for="email">Correo electronico</label>
                             <input type="email" id="email" placeholder="ejemplo@gmail.com">
                         </p>
-                    
+
                         <p>
                             <label for="fecha">Fecha</label>
                             <input type="date" id="fecha">
@@ -256,27 +300,21 @@
                         <p>
                             <label for="personas">Cantidad de Personas:</label>
                             <input type="number" id="personas" placeholder="Cantidad de Personas:">
-<!--                             <label for="personas">Cantidad de personas:</label>
-                            <select id="servicio">
-                                <option value="uno">1 Persona</option>
-                                <option value="dos">2 Personas</option>
-                                <option value="tres">3 Personas</option>
-                                <option value="cuatro">4 Personas</option>
-                                <option value="cinco">5 Personas</option>
-                            </select> -->
                         </p>
-                 
-                </div>
-                ¿Decidieron que van a comer? <input type="radio" name="comida" value="si" id="si"> <label for="si">Si</label>
-                <input type="radio" name="comida" value="no" id="no" ><label for="no">Decidir en el Local</label>
-                <br>
-                <input type="button" value="Reservar Mesa" id="btnSend">
-            </div>
-        </form>
 
-    </div>
-</section>
-    <!--FOOER AREA-->
+                    </div>
+                    ¿Decidieron que van a comer? <input type="radio" name="comida" value="si" id="si"> <label
+                        for="si">Si</label>
+                    <input type="radio" name="comida" value="no" id="no"><label for="no">Decidir en el Local</label>
+                    <br>
+                    <input type="button" value="Reservar Mesa" id="btnSend">
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <!--FOOTER AREA-->
 
     <footer class="footer area">
 
@@ -287,15 +325,15 @@
                 </div>
                 <div class="footer-address">
                     <p>Avenida Pueyrredon 1000. Córdoba, Aregentina</p>
-                    <p><a href="mailto:giovaborgogno@gmail.com">giovannivegano@giovanni.com</a></p>
+                    <p><a href="mailto:giovaborgogno@gmail.com">info@ucc.com</a></p>
                     <p><a href="callto:+543518731018">+54 351 873 1018</a></p>
                 </div>
 
             </div>
         </div>
     </footer>
-    <!--FOOER AREA END-->
-
+    <!--FOOTER AREA END-->
+    <canvas id="canvas"></canvas>
 
 </body>
 

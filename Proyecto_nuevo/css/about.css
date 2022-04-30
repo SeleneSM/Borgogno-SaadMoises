@@ -1,3 +1,9 @@
+/*
+----------Proyecto Borgogno-Saad-------------
+Todo el CCS esta en el siguiente orden:
+1) SECCION SOBRE NOSOTROS
+2) SECCION EQUIPO
+*/
 /* ABOUT AREA*/
 .about-area {
     background: rgba(0, 0, 0, 0) url("../img/about/home_three_about_bg.png") no-repeat scroll center bottom / contain;

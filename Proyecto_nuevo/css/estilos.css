@@ -1,6 +1,21 @@
+/*
+----------Proyecto Borgogno-Saad-------------
+Todo el CCS esta en el siguiente orden:
+1) Base CSS
+2) Barra de navegacion
+3) Slider de la seccion HOME
+4) Seccion Menus
+5) Seccion Formulario
+6) Footer
+7) Canvas
 
-/*BASE CSS*/
+*/
+
+/*------------------------------
+    1.BASE CSS
+------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lato:400,700|PT+Sans+Narrow:400,700');
+
 .alignleft {
     float: left;
     margin-right: 15px;
@@ -125,12 +140,15 @@ a:hover {
 
 /*END BASE CSS*/
 
-/* BARRA DE NAVEGACION*/
-html, body {
+/*-------------------------------
+    2.BARRA DE NAVEGACION
+-------------------------------*/
+html,
+body {
     height: 100%;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     width: 100%;
     position: absolute;
     display: flex;
@@ -140,30 +158,32 @@ html, body {
     z-index: 5;
     position: fixed;
     font-weight: bold;
-    
-  }
 
-  .navbackground{
+}
+
+.navbackground {
     position: absolute;
     height: 8%;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    z-index: 1;
+    z-index: 2;
     margin: 0 0 0 0;
     position: fixed;
-  }
-  .nav {
+}
+
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    
+
 }
 
 .nav li {
     float: left;
 }
-.nav li a:hover{
+
+.nav li a:hover {
     color: #ca3d26;
 }
 
@@ -174,9 +194,12 @@ html, body {
     padding: 14px 16px;
     text-decoration: none;
 }
-  /*END BARRA DE NAVEGACION*/
 
-/*SLIDE AREA*/
+/*END BARRA DE NAVEGACION*/
+
+/*--------------------------
+    2.SLIDE AREA
+-----------------------------*/
 @keyframes slidy {
     0% { left: 0%; }
     20% { left: 0%; }
@@ -188,253 +211,280 @@ html, body {
     95% { left: -300%; }
     100% { left: -400%; }
     }
-    
-    body { margin: 0; overflow-x: hidden; } 
-    .fade{
-        position: absolute;
-        background-color: #1a1a1a;
-        opacity: 73%;
-        width: 100%;  height: 100%;
-        z-index: 3;
-        background-image: url("../img/pattarn.png");
-        background-repeat: repeat;
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.fade {
+    position: absolute;
+    background-color: #1a1a1a;
+    opacity: 73%;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-image: url("../img/pattarn.png");
+    background-repeat: repeat;
 
 
-    }
+}
 
-    
 
-    div#slider figure img { width: 20%;  height: 100%; float: left; }
-    div#slider figure { 
-      position: relative;
-      width: 500%;
-      margin: 0;
-      left: 0;
-      text-align: left;
-      font-size: 0;
-      animation: 30s slidy infinite; 
-      z-index: 2;
-    }
+
+div#slider figure img {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite;
+    z-index: 2;
+}
+
 /*     .slider-area{
         position: absolute;
         margin: 0;
     } */
 
-    .pogoSlider{
-        /* position: absolute; */
-        z-index: 4;
-        color: rgb(255, 255, 255);
-/*         position: relative; */
-        width: 500%;
-        top: 25%;
-        text-align: center;
-        animation: 30s slidy infinite; 
-        overflow: hidden;
-        position: absolute;
-    }
+.pogoSlider {
+    /* position: absolute; */
+    z-index: 4;
+    color: rgb(255, 255, 255);
+    /*         position: relative; */
+    width: 500%;
+    top: 25%;
+    text-align: center;
+    animation: 30s slidy infinite;
+    overflow: hidden;
+    position: absolute;
+}
 
-    .pogoSlider a{
-        color: #ccc;
-    }
+.pogoSlider a {
+    color: #ccc;
+}
 
-    .pogoSlider-slide { width: 20%;  height: 100%; float: left; }
-    div#slider {
-        overflow: hidden;
-    }
+.pogoSlider-slide {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
 
-    .slider-area h1 {
-        font-size: 65px;
-        font-weight: 300;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-    
-    .slider-area h1 span {
-        font-weight: 700;
-    }
-    
-    .slider-area h2 {
-        font-family: 'Dancing Script', cursive;
-        font-size: 82px;
-        letter-spacing: 2px;
-        text-transform: capitalize;
-    }
-    
-    .slider-area h3 {
-        font-family: lato;
-        font-weight: 700;
-        letter-spacing: 6px;
-        text-transform: uppercase;
-    }
-    
-    .slider-area h3 a,
-    a.home-reservation-button {
-        border: 1px solid;
-        color: #fff;
-        display: inline-block;
-        font-size: 13px;
-        margin-top: 15px;
-        padding: 10px 30px;
-    }
-    
-    .slider-area h3 a:hover,
-    a.home-reservation-button:hover {
-        color: #fff;
-        background: #ca3d26 none repeat scroll 0 0;
-        border-color: #ca3d26;
-    }
-    
-    /*END SLIDE AREA*/
+div#slider {
+    overflow: hidden;
+}
 
-    /*MENU AREA*/
+.slider-area h1 {
+    font-size: 65px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-    .menus-area {
-        position: relative;
-        width: 100%;
-        z-index: -1;
-        padding-top: 4%;
-        
+.slider-area h1 span {
+    font-weight: 700;
+}
 
-    }
-    
-    .menus-area.section-padding {
-        padding-bottom: 60px;
+.slider-area h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 82px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
 
-    }
-    
-    .food-menu-list-menu {
-        margin-bottom: 60px;
-    }
-    
-    .food-menu-list-menu ul {
-        list-style: outside none none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    
-    .food-menu-list-menu ul li {
-        border: 1px solid;
-        color: #1e1e1f;
-        cursor: pointer;
-        display: inline-block;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        margin: 0 2px;
-        padding: 3px 10px;
-        text-transform: uppercase;
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s;
-    }
-    
-    .food-menu-list-menu ul li:hover,
-    .food-menu-list-menu ul li.active {
-        background: #ca3d26 none repeat scroll 0 0;
-        border-color: #ca3d26;
-        color: #fff;
-    }
-    
-    .single-menu .single-menu-details {
-        border-bottom: 1px solid #E4E4E4;
-        margin-bottom: 40px;
-        padding-bottom: 40px;
-        padding-left: 140px;
-        position: relative;
-    }
-    .food-img-1 img{
-        transition: all 1s;
-    }
-    .food-img-1:hover img{
-        transform:scale(1.40);
-        box-shadow: 0 0 5px 5px #ca3d26
-    }
-    
-    .food-menu-img {
-        border-radius: 50%;
-        height: 100px;
-        left: 0;
-        overflow: hidden;
-        position: absolute;
-        top: 10%;
-        box-shadow: 0 0 0 10px #ddd;
-    }
-    
-    .food-menu-details {
-        color: #1e1e1f;
-        padding: 0;
-        text-align: inherit;
-    }
-    
-    .food-menu-details h3 {
-        font-size: 20px;
-        margin-bottom: 8px;
-        
-    }
-    
-    .food-menu-details p span {
-        display: inline-block;
-        width: 30%;
-    }
-    
-    .food-menu-details span {
-        color: #ca3d26;
+.slider-area h3 {
+    font-family: lato;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
 
-    }
-    
-    .menu-speacification {
-        margin-bottom: 0;
-    }
+.slider-area h3 a,
+a.home-reservation-button {
+    border: 1px solid;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 15px;
+    padding: 10px 30px;
+}
 
-     .food-menu-list-menu{
-        column-count: 2;
-        column-gap: 30px;
-        margin: 6px 20px;
-    }
-    
-    
-    /*END MENU AREA*/
+.slider-area h3 a:hover,
+a.home-reservation-button:hover {
+    color: #fff;
+    background: #ca3d26 none repeat scroll 0 0;
+    border-color: #ca3d26;
+}
 
-    /* MENU 2 AREA*/
+/*END SLIDE AREA*/
+
+/*------------------------------
+    4.SECCION MENUS
+------------------------------*/
+/*MENU AREA*/
+
+.menus-area {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    padding-top: 4%;
+
+
+}
+
+.menus-area.section-padding {
+    padding-bottom: 60px;
+
+}
+
+.food-menu-list-menu {
+    margin-bottom: 60px;
+}
+
+.food-menu-list-menu ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.food-menu-list-menu ul li {
+    border: 1px solid;
+    color: #1e1e1f;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 2px;
+    padding: 3px 10px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.food-menu-list-menu ul li:hover,
+.food-menu-list-menu ul li.active {
+    background: #ca3d26 none repeat scroll 0 0;
+    border-color: #ca3d26;
+    color: #fff;
+}
+
+.single-menu .single-menu-details {
+    border-bottom: 1px solid #E4E4E4;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    padding-left: 140px;
+    position: relative;
+}
+
+.food-img-1 img {
+    transition: all 500ms;
+}
+
+.food-img-1:hover img {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px 5px #ca3d26
+}
+
+.food-menu-img {
+    border-radius: 50%;
+    height: 100px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 10%;
+    box-shadow: 0 0 0 10px #ddd;
+}
+
+.food-menu-details {
+    color: #1e1e1f;
+    padding: 0;
+    text-align: inherit;
+}
+
+.food-menu-details h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+
+}
+
+.food-menu-details p span {
+    display: inline-block;
+    width: 30%;
+}
+
+.food-menu-details span {
+    color: #ca3d26;
+
+}
+
+.menu-speacification {
+    margin-bottom: 0;
+}
+
+.food-menu-list-menu {
+    column-count: 2;
+    column-gap: 30px;
+    margin: 6px 20px;
+}
+
+
+/*END MENU AREA*/
+
+/* MENU 2 AREA*/
 .container {
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .container {
     width: 1170px;
 }
 
-.header span{
-  font-family: 'Allura' cusiver;
-  color: #ffcc00;
-  line-height: 30px;
+.header span {
+    font-family: 'Allura' cursive;
+    color: #ffcc00;
+    line-height: 30px;
 }
+
 .dart-fs-48 {
     font-size: 2.7em;
 }
 
-.header{
-  text-align: center;
-  margin-top: 10px;
+.header {
+    text-align: center;
+    margin-top: 10px;
 }
-.header h1{
-  color: #333;
-  letter-spacing: 2px;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: bold;
-  text-transform: uppercase;
+
+.header h1 {
+    color: #333;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-transform: uppercase;
 }
-.header hr{
-  background-color: #333333;
-  height: 2px;
-  width: 100px;
-  border: none;
-  margin-top: 10px;
+
+.header hr {
+    background-color: #333333;
+    height: 2px;
+    width: 100px;
+    border: none;
+    margin-top: 10px;
 }
-.menu-food .menu-food-pennal li.food-spicy, .menu-food .menu-food-pennal li:hover {
+
+.menu-food .menu-food-pennal li.food-spicy,
+.menu-food .menu-food-pennal li:hover {
     padding: 12px 0;
     position: relative;
     color: #fff;
@@ -444,12 +494,14 @@ html, body {
     border-bottom-right-radius: 10px;
     transition: all 500ms ease-in-out;
 }
+
 .menu-food .menu-food-pennal {
     padding: 0;
     margin: 10px;
     height: 100px;
-    border-bottom: 3px solid #ffcc00; 
+    border-bottom: 3px solid #ffcc00;
 }
+
 .menu-food .menu-food-pennal li {
     float: left;
     list-style-type: none;
@@ -460,44 +512,58 @@ html, body {
     font-size: 15px;
     display: block;
     cursor: pointer;
-    height: 98px;   
+    height: 98px;
 }
-.hinh-1{
-  border-radius: 50%;
+
+.hinh-1 {
+    border-radius: 50%;
 }
+
 .menu-list-1 .dish-name {
     padding: 6px 0 0 10px;
     overflow: hidden;
 }
+
 .dishs-price {
     color: #ca3d26;
     font-weight: 600;
     font-size: 1.2857142857142858em;
 }
+
 .menu-list-1 {
     margin-bottom: 40px;
     min-height: 110px;
     padding-bottom: 40px;
     border-bottom: 1px dashed #ccc;
-    
+
 }
-.food-list{
-      padding-top: 30px;
-      background-color: #fff;
-      column-count: 2;
-       column-gap: 1%;
-       margin-left: 5%;
 
-    }
+.food-list {
+    padding-top: 30px;
+    background-color: #fff;
+    column-count: 2;
+    column-gap: 1%;
+    margin-left: 5%;
 
-.mon-1{
+}
+
+.mon-1 {
     position: relative;
     min-height: 1px;
     padding-left: 45px;
     padding-right: 45px;
 }
-  .menu-food .menu-food-pennal .food-1, .menu-food .menu-food-pennal .food-2,.menu-food .menu-food-pennal .food-3,.menu-food .menu-food-pennal .food-4, .menu-food .menu-food-pennal .food-5,.menu-food .menu-food-pennal .food-6,.menu-food .menu-food-pennal .food-7,.menu-food .menu-food-pennal .food-8,.menu-food .menu-food-pennal .food-9,.menu-food .menu-food-pennal .food-10
-  {
+
+.menu-food .menu-food-pennal .food-1,
+.menu-food .menu-food-pennal .food-2,
+.menu-food .menu-food-pennal .food-3,
+.menu-food .menu-food-pennal .food-4,
+.menu-food .menu-food-pennal .food-5,
+.menu-food .menu-food-pennal .food-6,
+.menu-food .menu-food-pennal .food-7,
+.menu-food .menu-food-pennal .food-8,
+.menu-food .menu-food-pennal .food-9,
+.menu-food .menu-food-pennal .food-10 {
     background-image: url(https://www.multipurposethemes.com/html-templates/morsel/images/food_icons.png);
     height: 46px;
     width: 46px;
@@ -506,6 +572,7 @@ html, body {
     margin: 0 auto;
     margin-bottom: 5px;
 }
+
 menu-food .menu-food-pennal li span {
     display: none;
 }
@@ -513,15 +580,19 @@ menu-food .menu-food-pennal li span {
 .menu-food .menu-food-pennal .food-1 {
     background-position: 0 0;
 }
- .menu-food .menu-food-pennal .food-2 {
+
+.menu-food .menu-food-pennal .food-2 {
     background-position: -115px -0px;
 }
+
 .menu-food .menu-food-pennal .food-3 {
     background-position: -232px 0;
 }
+
 .menu-food .menu-food-pennal .food-4 {
     background-position: -349px 0;
 }
+
 .menu-food .menu-food-pennal .food-5 {
     background-position: -467px 0;
 }
@@ -529,9 +600,11 @@ menu-food .menu-food-pennal li span {
 .menu-food .menu-food-pennal .food-6 {
     background-position: -583px 0;
 }
+
 .menu-food .menu-food-pennal .food-7 {
     background-position: -699px 0;
 }
+
 .menu-food .menu-food-pennal .food-8 {
     background-position: -815px 0;
 }
@@ -544,199 +617,204 @@ menu-food .menu-food-pennal li span {
     background-position: -1047px 0;
 }
 
-.menu-list-1{
+.menu-list-1 {
     column-count: 2;
     /* column-gap: 30px; */
     margin: 6px 80px;
 }
-    /*END MENU 2 AREA*/
+
+/*END MENU 2 AREA*/
 
 
-  
-  /* FORMULARIO =================================== */
-  .form{
-      height: 100%;
-      padding-top: 2%;
-  }
-  .form_wrap{
-      width: 1050px;
-      height: 530px;
-      margin: 50px auto;
-      display: flex;
-      z-index: -5;
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Informacion de Contacto*/
-  
-  .cantact_info::before{
-      content: '';
-      width: 100%;
-      height: 100%;
-    
-      position: absolute;
-      top: 0;
-      left: 0;
-  
-      background: #ca3d26;
-      opacity: 0.9;
-  }
-  
-  .cantact_info{
-      width: 38%;
-      position: relative;
-z-index: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  
-      background-image: url('../fondo.jpg');
-      background-size: cover;
-      background-position: center center;
-  
-  }
-  
-  .info_title/* ,
-  .info_items */{
-      position: relative;
-      z-index: 2;
-      color: #fff;
-  }
-  
-  .info_title{
-      margin-bottom: 60px;
-  }
-  
-  .info_title span{
-      font-size: 100px;
-      display: block;
-      text-align: center;
-      margin-bottom: 15px;
-  }
-  
-  .info_title h2{
-      font-size: 35px;
-      text-align: center;
-  }
-  
-/*   .info_items p{
-      display: flex;
-      align-items: center;
-  
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 10px;
-  }
-  
-  .info_items p:nth-child(1) span{
-      font-size: 30px;
-      margin-right: 10px;
-  }
-  
-  .info_items p:nth-child(2) span{
-      font-size: 50px;
-      margin-right: 15px;
-      margin-left: 4px;
-  } */
-  
-  
-  /* Formulario de contacto*/
-  form.form_reserva{
-      width: 62%;
-      padding: 30px 40px;
-      
-      
-    
-  }
-  
-  form.form_reserva h2{
-      font-size: 25px;
-      font-weight: 600;
-      color: #303030;
-      margin-bottom: 30px;
-  }
 
-  
-  
-  form.form_reserva .user_info{
-    display:block; 
-      
+/*--------------------------------- 
+    5. SECCION FORMULARIO 
+----------------------------------- */
+.form {
+    height: 100%;
+    padding-top: 2%;
+}
 
-      
-  }
-  .columnas-form{
+.form_wrap {
+    width: 1050px;
+    height: 530px;
+    margin: 50px auto;
+    display: flex;
+    z-index: -5;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Informacion de Contacto*/
+
+.cantact_info::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: #ca3d26;
+    opacity: 100;
+}
+
+.cantact_info {
+    width: 38%;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../fondo.jpg');
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.info_title
+
+/* ,
+  .info_items */
+    {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.info_title {
+    margin-bottom: 60px;
+}
+
+.info_title span {
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info_title h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+
+/* Formulario de contacto*/
+form.form_reserva {
+    width: 62%;
+    padding: 30px 40px;
+
+
+
+}
+
+form.form_reserva h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 30px;
+}
+
+
+
+form.form_reserva .user_info {
+    display: block;
+
+
+
+}
+
+.columnas-form {
     column-count: 2;
+
+}
+
+form.form_reserva label {
+    font-weight: 600;
+}
+
+form.form_reserva input,
+form.form_reserva option {
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+
+    font-family: 'Open sans';
+    color: #5A5A5A;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form.form_reserva option {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 90px;
+}
+
+form.form_reserva input[type="radio"] {
+    width: 3%;
+}
+
+form.form_reserva input[type="button"] {
+    width: 180px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid;
+    border-color: #ca3d26;
     
-  }
-  
-  form.form_reserva label{
-      font-weight: 600;
-  }
-  
-  form.form_reserva input,
-  form.form_reserva option{
-      width: 100%;
-      padding: 8px 0px 5px;
-      margin-bottom: 20px;
-  
-      border: none;
-      border-bottom: 2px solid #D1D1D1;
-  
-      font-family: 'Open sans';
-      color: #5A5A5A;
-      font-size: 14px;
-      font-weight: 400;
-  }
-  
-  form.form_reserva option{
-      max-width: 100%;
-      min-width: 100%;
-      max-height: 90px;
-  }
-  form.form_reserva input[type="radio"]{
-      width: 3%;
-  }
-  form.form_reserva input[type="button"]{
-      width: 180px;
-      background: #ca3d26;
-      padding: 10px;
-      border: none;
-      border-radius: 25px;
-  
-      align-self: flex-end;
-  
-      color: #fff;
-      font-family: 'Open sans';
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 1s;
-  }
-  
-  form.form_reserva input[type="button"]:hover{
-      transform: scale(1.15);
-  }
-  
 
-  
+    align-self: flex-end;
 
-    /*------------------------------
-    10. FOOTER AREA
+    color: #ca3d26;
+    font-family: 'Open sans';
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+form.form_reserva input[type="button"]:hover {
+    transform: scale(1.1);
+    background: #ca3d26;
+    color: #fff;
+}
+
+/*formulario para js*/
+.formparajs{
+    width: 300px;
+    height: 510px;
+    position: absolute;
+    margin: 7% 14%;
+    z-index: 1;
+    background-color: #ca3d26;
+    text-align: center;
+    color: #000000;
+    display:none;
+}
+
+
+/*------------------------------
+    6. SECCION FOOTER
 -------------------------------*/
 
 .footer-area {
-    background: #191a1b ;
+    background: #191a1b;
     color: #cacaca;
     letter-spacing: 1px;
     position: relative;
     height: 40%;
 }
 
-.footer-content{
+.footer-content {
     padding-top: 3%;
 }
 
@@ -752,13 +830,14 @@ z-index: 0;
 .footer-logo,
 .footer-address {
     text-align: center;
-    
+
 }
 
+/*----------------------------------
+    7. CANVAS
+-----------------------------------*/
 
-
-
-
-
-
-
+#canvas {
+    visibility: hidden;
+    display: none;
+}
