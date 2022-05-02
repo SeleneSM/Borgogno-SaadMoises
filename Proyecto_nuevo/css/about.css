@@ -4,6 +4,7 @@ Todo el CCS esta en el siguiente orden:
 1) SECCION SOBRE NOSOTROS
 2) SECCION EQUIPO
 */
+
 /* -------------------------------------
     1.SECCION SOBRE NOSOTROS
 --------------------------------------*/
@@ -34,21 +35,6 @@ Todo el CCS esta en el siguiente orden:
     position: relative;
 }
 
-.about-area .area-title h2 span {
-    color: #212324;
-    font-family: lato;
-    font-size: 48px;
-    text-transform: uppercase;
-}
-
-.about-area .area-title h2::after {
-    display: none;
-}
-
-.about-content {
-    color: #4a4d4f;
-}
-
 .about-parrafo {
     column-count: 2;
     column-gap: 30px;
@@ -56,33 +42,29 @@ Todo el CCS esta en el siguiente orden:
 }
 
 
-/*END ABOUT AREA*/
+/*FIN SECCION SOBRE NOSOTROS*/
 
-.about-equipo{
-    position:relative;
+/* -------------------------------------
+    2.SECCION EQUIPO
+--------------------------------------*/
+
+.about-equipo {
+    position: relative;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     font-family: tahoma;
-    
-   
-    
 }
 
-.team{
+.team {
     align-items: center;
-/*     flex-direction: column;
-    justify-content: center;
-    list-style-type: none;
-    width: 100%; */
 }
 
-.col-12{
-    margin-left: 10%;
-    float:left;
+.col-12 {
+    margin-left: 9.75%;
+    float: left;
     display: block;
-    
 }
 
 .our-team {
@@ -93,7 +75,6 @@ Todo el CCS esta en el siguiente orden:
     text-align: center;
     overflow: hidden;
     position: relative;
-
 }
 
 .our-team .picture {
@@ -156,31 +137,4 @@ Todo el CCS esta en el siguiente orden:
     text-transform: capitalize;
 }
 
-.our-team .social {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #ca3d26;
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    transition: all 0.5s ease 0s;
-}
-
-.our-team:hover .social {
-    bottom: 0;
-}
-
-.our-team .social li {
-    display: inline-block;
-}
-
-.our-team .social li a {
-    display: block;
-    padding: 10px;
-    font-size: 17px;
-    color: white;
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-}
-
+/*FIN SECCION EQUIPO*/

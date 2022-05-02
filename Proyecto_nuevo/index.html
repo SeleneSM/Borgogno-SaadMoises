@@ -1,3 +1,13 @@
+<!--
+----------Proyecto Borgogno-Saad-------------
+Todo el body esta en el siguiente orden:
+1) HOME SLIDER
+2) MENUS
+3) FORMULARIOS
+4) CONTACTO
+5) CANVAS
+-->
+
 <html lang="en">
 
 <head>
@@ -14,42 +24,34 @@
     <link rel="shortcut icon" type="image/ico" href="img/favicon.png" />
 
     <!--====== STYLESHEETS ======-->
-
     <link rel="stylesheet" href="css/estilos.css">
-    <!--====== PRINCIPAL STYLESHEETS ======-->
-
 
 </head>
 
 <body>
-
-
     <header>
+        <!-----------------------------
+            1.AREA DE HOME SLIDER 
+        ------------------------------>
 
-        <!-- AREA DE HOME SLIDER -->
+        <!--BARRA DE NAVEGACION-->
         <div>
             <div class="navbackground">
-
             </div>
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-
-                <div class="collapse navbar-collapse" id="mainNavBar">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-link active"><a class="nav-link" href="#slider">Home</a></li>
-                        <li class="nav-link"><a class="nav-link" href="#menu">Menus</a></li>
-                        <li class="nav-link"><a class="nav-link" href="#reservation">Reserva tu mesa</a></li>
-                        <li class="nav-link"><a class="nav-link" href="#contacto">Contacto</a></li>
-                        <li class="nav-link"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
-                        <li class="nav-link"><a class="nav-link" href="about.html#team">Equipo</a></li>
-                    </ul>
-                </div>
+            <nav class="navbar">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-link active"><a class="nav-link" href="#slider">Home</a></li>
+                    <li class="nav-link"><a class="nav-link" href="#menu">Menus</a></li>
+                    <li class="nav-link"><a class="nav-link" href="#reservation">Reserva tu mesa</a></li>
+                    <li class="nav-link"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-link"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
+                    <li class="nav-link"><a class="nav-link" href="about.html#team">Equipo</a></li>
+                </ul>
             </nav>
         </div>
+        <!--SLIDE-->
         <div id="slider">
             <div class="fade">
-
             </div>
             <figure>
                 <img src="img/slider/slide_1.jpg" alt>
@@ -58,10 +60,6 @@
                 <img src="img/slider/slide_2.jpg" alt>
                 <img src="img/slider/slide_1.jpg" alt>
             </figure>
-
-
-
-
             <div class="slider-area">
                 <div class="pogoSlider">
                     <div class="pogoSlider-slide">
@@ -114,168 +112,163 @@
                 </div>
             </div>
         </div>
+        <!--FIN AREA HOME SLIDER-->
 
-        <!--HOME SLIDER AREA END-->
     </header>
 
+    <!-----------------------------
+        2.AREA DE MENUS 
+    ------------------------------>
     <section class="menus-area section-padding" id="menu">
+
         <div class="container wow fadeIn">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <div class="area-title text-center">
-                        <h2>Menus de hoy</h2>
-                    </div>
-                </div>
+            <div class="area-title text-center">
+                <h2>Menus de hoy</h2>
             </div>
-
             <div class="food-list">
-                <div class="list-1">
-                    <div class="col-md-4 mon-1">
-                        <div class="menu-list-1">
-                            <div class="pull-left food-img-1">
-                                <img class="food-menu-img" src="img/menu/menu_1.jpg" alt="">
-                            </div>
-                            <div class="dish-name">
-                                <h4> RISOTTO </h4>
-                                <p>Risotto de
-                                    hongos</p>
-                                <div class="dishs-price"><span>$780</span></div>
-                            </div>
+                <div class="mon-1">
+                    <div class="menu-list-1">
+                        <div class="food-img-1">
+                            <img class="food-menu-img" src="img/menu/menu_1.jpg" alt="">
                         </div>
-                    </div>
-                    <!--mon ăn 1 col-sm-6 mon-1-->
-                    <div class="col-md-4 mon-1">
-                        <div class="menu-list-1">
-                            <div class="pull-left food-img-1">
-                                <img class="food-menu-img" src="img/menu/menu_2.jpg" alt="">
-                            </div>
-                            <div class="dish-name">
-                                <h4> HAMBURGUESAS</h4>
-                                <p>Lenteja / Garbanzo / Arvejas</p>
-                                <div class="dishs-price"><span>$800</span></div>
-                            </div>
+                        <div class="dish-name">
+                            <h4> RISOTTO </h4>
+                            <p>Risotto de
+                                hongos</p>
+                            <div class="dishs-price"><span>$780</span></div>
                         </div>
-                    </div>
-                    <!--mon ăn 2 col-sm-6 mon-1-->
-                    <div class="col-md-4 mon-1">
-                        <div class="menu-list-1">
-                            <div class="pull-left food-img-1">
-                                <img class="food-menu-img" src="img/menu/menu_3.jpg" alt="">
-                            </div>
-                            <div class="dish-name">
-                                <h4> CHESEECAKE</h4>
-                                <p>Frutillas y
-                                    maracuyá</p>
-                                <div class="dishs-price"><span>$500</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--mon ăn 2 col-sm-6 mon-1-->
-                    <div class="col-md-4 mon-1">
-                        <div class="menu-list-1">
-                            <div class="pull-left food-img-1">
-                                <img class="food-menu-img" src="img/menu/menu_4.jpg" alt="">
-                            </div>
-                            <div class="dish-name">
-                                <h4> WRAP </h4>
-                                <p>Lechuga, zanahoria
-                                    y cebolla morada</p>
-                                <div class="dishs-price"><span>$700</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--mon ăn 2 col-sm-6 mon-1-->
-                    <div class="col-md-4 mon-1">
-                        <div class="menu-list-1">
-                            <div class="pull-left food-img-1">
-                                <img class="food-menu-img" src="img/menu/menu_5.jpg" alt="">
-                            </div>
-                            <div class="dish-name">
-                                <h4> SUSHI 12 piezas</h4>
-                                <p>Zanahoria, lechuga y pepino </p>
-                                <div class="dishs-price"><span>$900</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--mon ăn 2 col-sm-6 mon-1-->
-                    <div class="col-md-4 mon-1">
-                        <div class="menu-list-1">
-                            <div class="pull-left food-img-1">
-                                <img class="food-menu-img" src="img/menu/menu_6.jpg" alt="">
-                            </div>
-                            <div class="dish-name">
-                                <h4> TIRAMISU</h4>
-                                <p>Con café de
-                                    cosecha especial</p>
-                                <div class="dishs-price"><span>$500</span></div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-
+                <div class="mon-1">
+                    <div class="menu-list-1">
+                        <div class="food-img-1">
+                            <img class="food-menu-img" src="img/menu/menu_2.jpg" alt="">
+                        </div>
+                        <div class="dish-name">
+                            <h4> HAMBURGUESAS</h4>
+                            <p>Lenteja / Garbanzo / Arvejas</p>
+                            <div class="dishs-price"><span>$800</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mon-1">
+                    <div class="menu-list-1">
+                        <div class="food-img-1">
+                            <img class="food-menu-img" src="img/menu/menu_3.jpg" alt="">
+                        </div>
+                        <div class="dish-name">
+                            <h4> CHESEECAKE</h4>
+                            <p>Frutillas y
+                                maracuyá</p>
+                            <div class="dishs-price"><span>$500</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mon-1">
+                    <div class="menu-list-1">
+                        <div class="food-img-1">
+                            <img class="food-menu-img" src="img/menu/menu_4.jpg" alt="">
+                        </div>
+                        <div class="dish-name">
+                            <h4> WRAP </h4>
+                            <p>Lechuga, zanahoria
+                                y cebolla morada</p>
+                            <div class="dishs-price"><span>$700</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mon-1">
+                    <div class="menu-list-1">
+                        <div class="food-img-1">
+                            <img class="food-menu-img" src="img/menu/menu_5.jpg" alt="">
+                        </div>
+                        <div class="dish-name">
+                            <h4> SUSHI 12 piezas</h4>
+                            <p>Zanahoria, lechuga y pepino </p>
+                            <div class="dishs-price"><span>$900</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mon-1">
+                    <div class="menu-list-1">
+                        <div class="food-img-1">
+                            <img class="food-menu-img" src="img/menu/menu_6.jpg" alt="">
+                        </div>
+                        <div class="dish-name">
+                            <h4> TIRAMISU</h4>
+                            <p>Con café de
+                                cosecha especial</p>
+                            <div class="dishs-price"><span>$500</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-    </section>
 
-        <!-- /*-----------------------------------------------------------
-    Formulario que esta oculto, debe aparecer cuando usemos js 
+    </section>
+    <!--FIN AREA HOME SLIDER-->
+
+    <!-----------------------------
+        3.AREA DE FORMULARIOS 
+    ------------------------------>
+    <!-- /*-----------------------------------------------------------
+    Formulario oculto, debe aparecer cuando usemos js 
     sera visible cuando clickeen el boton "Reservar Mesa"
 -----------------------------------------------------------*/ -->
 
-<section class="formparajs" id="formparajs">
-    <div>
-        <label for="menu_1">
-            <p>Risotto: </p>
-        </label>
-        <input type="number" id="menu_1" placeholder="Cantidad de Platos">
-        <label for="menu_2">
-            <p>Hamburguesas: </p>
-        </label>
-        <input type="number" id="menu_2" placeholder="Cantidad de Platos">
-        <label for="menu_3">
-            <p>Cheeseecake: </p>
-        </label>
-        <input type="number" id="menu_3" placeholder="Cantidad de Platos">
-        <label for="menu_4">
-            <p>Wrap: </p>
-        </label>
-        <input type="number" id="menu_4" placeholder="Cantidad de Platos">
-        <label for="menu_5">
-            <p>Sushi: </p>
-        </label>
-        <input type="number" id="menu_5" placeholder="Cantidad de Platos">
-        <label for="menu_6">
-            <p>Tiramisu: </p>
-        </label>
-        <input type="number" id="menu_6" placeholder="Cantidad de Platos">
+    <section class="formparajs" id="formparajs">
+
         <div>
-            <p>
-                <button value="Cerrar">Cerrar</button>
-                <button value="Reservar">Reservar</button>
-            </p>
+            <label for="menu_1">
+                <p>Risotto: </p>
+            </label>
+            <input type="number" id="menu_1" placeholder="Cantidad de Platos">
+            <label for="menu_2">
+                <p>Hamburguesas: </p>
+            </label>
+            <input type="number" id="menu_2" placeholder="Cantidad de Platos">
+            <label for="menu_3">
+                <p>Cheeseecake: </p>
+            </label>
+            <input type="number" id="menu_3" placeholder="Cantidad de Platos">
+            <label for="menu_4">
+                <p>Wrap: </p>
+            </label>
+            <input type="number" id="menu_4" placeholder="Cantidad de Platos">
+            <label for="menu_5">
+                <p>Sushi: </p>
+            </label>
+            <input type="number" id="menu_5" placeholder="Cantidad de Platos">
+            <label for="menu_6">
+                <p>Tiramisu: </p>
+            </label>
+            <input type="number" id="menu_6" placeholder="Cantidad de Platos">
+            <div>
+                <p>
+                    <button value="Cerrar">Cerrar</button>
+                    <button value="Reservar">Reservar</button>
+                </p>
+            </div>
         </div>
-    </div>
-</section>
 
-<!-- Fin del formulario oculto -->
+    </section>
 
+    <!-- Fin del formulario oculto -->
+
+    <!--FORMULARIO VISIBLE-->
     <section class="form" id="reservation">
-        <div class="form_wrap">
 
+        <div class="form_wrap">
             <section class="cantact_info">
                 <section class="info_title">
-                    <span class="fa fa-user-circle"></span>
                     <h2>
                         <P>RESERVA TU</P>MESA AHORA
                     </h2>
                 </section>
             </section>
-
             <form class="form_reserva">
                 <h2>Reservar para:</h2>
                 <div class="user_info">
                     <div class="columnas-form">
-
                         <p>
                             <label for="names">Nombre</label>
                             <input type="text" id="names" placeholder="Nombre...">
@@ -288,7 +281,6 @@
                             <label for="email">Correo electronico</label>
                             <input type="email" id="email" placeholder="ejemplo@gmail.com">
                         </p>
-
                         <p>
                             <label for="fecha">Fecha</label>
                             <input type="date" id="fecha">
@@ -301,7 +293,6 @@
                             <label for="personas">Cantidad de Personas:</label>
                             <input type="number" id="personas" placeholder="Cantidad de Personas:">
                         </p>
-
                     </div>
                     ¿Decidieron que van a comer? <input type="radio" name="comida" value="si" id="si"> <label
                         for="si">Si</label>
@@ -310,11 +301,13 @@
                     <button type="button" value="Reservar Mesa" id="btnSend">Reservar Mesa</button>
                 </div>
             </form>
-
         </div>
+
     </section>
 
-    <!--FOOTER AREA-->
+    <!-----------------------------
+        4.AREA CONTACTO 
+    ------------------------------>
 
     <footer class="footer area">
 
@@ -331,8 +324,13 @@
 
             </div>
         </div>
+
     </footer>
-    <!--FOOTER AREA END-->
+    <!--FIN DEL AREA CONTACTO-->
+
+    <!-----------------------------
+        5.AREA DE CANVAS 
+    ------------------------------>
     <canvas id="canvas"></canvas>
 
 </body>

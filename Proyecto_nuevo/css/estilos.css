@@ -16,42 +16,6 @@ Todo el CCS esta en el siguiente orden:
 ------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lato:400,700|PT+Sans+Narrow:400,700');
 
-.alignleft {
-    float: left;
-    margin-right: 15px;
-}
-
-.alignright {
-    float: right;
-    margin-left: 15px;
-}
-
-.aligncenter {
-    display: block;
-    margin: 0 auto 15px;
-}
-
-a {
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    color: #212324;
-}
-
-a:hover {
-    color: #ca3d26;
-}
-
-a:focus,
-a:hover {
-    outline: 0;
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 h1,
 h2,
 h3,
@@ -77,28 +41,6 @@ body {
     line-height: 1.7em;
 }
 
-a:hover {
-    text-decoration: none
-}
-
-.navbar-toggle {
-    border: 2px solid #fff;
-    border-radius: 0;
-}
-
-.navbar-toggle .icon-bar {
-    background: #fff none repeat scroll 0 0;
-}
-
-.is-sticky .navbar-header .collapse,
-.is-sticky .navbar-toggle {
-    border: 2px solid #1a1a1a;
-}
-
-.is-sticky .navbar-toggle .icon-bar {
-    background: #1a1a1a none repeat scroll 0 0;
-}
-
 .area-title {
     margin-bottom: 60px;
 }
@@ -118,32 +60,12 @@ a:hover {
     padding: 100px 0;
 }
 
-.no-padding {
-    padding: 0;
-}
-
-.no-margin {
-    margin: 0;
-}
-
-.margin-top {
-    margin-top: 40px;
-}
-
-.margin-bottom {
-    margin-bottom: 40px;
-}
-
-.gray-bg {
-    background: #f3f4f4;
-}
-
 /*END BASE CSS*/
 
 /*-------------------------------
     2.BARRA DE NAVEGACION
 -------------------------------*/
-html,
+
 body {
     height: 100%;
 }
@@ -200,6 +122,7 @@ body {
 /*--------------------------
     2.SLIDE AREA
 -----------------------------*/
+
 @keyframes slidy {
     0% { left: 0%; }
     20% { left: 0%; }
@@ -211,7 +134,7 @@ body {
     95% { left: -300%; }
     100% { left: -400%; }
     }
-
+    
 body {
     margin: 0;
     overflow-x: hidden;
@@ -226,11 +149,7 @@ body {
     z-index: 3;
     background-image: url("../img/pattarn.png");
     background-repeat: repeat;
-
-
 }
-
-
 
 div#slider figure img {
     width: 20%;
@@ -249,16 +168,9 @@ div#slider figure {
     z-index: 2;
 }
 
-/*     .slider-area{
-        position: absolute;
-        margin: 0;
-    } */
-
 .pogoSlider {
-    /* position: absolute; */
     z-index: 4;
     color: rgb(255, 255, 255);
-    /*         position: relative; */
     width: 500%;
     top: 25%;
     text-align: center;
@@ -328,61 +240,12 @@ a.home-reservation-button:hover {
 /*------------------------------
     4.SECCION MENUS
 ------------------------------*/
-/*MENU AREA*/
 
 .menus-area {
     position: relative;
     width: 100%;
     z-index: -1;
     padding-top: 4%;
-
-
-}
-
-.menus-area.section-padding {
-    padding-bottom: 60px;
-
-}
-
-.food-menu-list-menu {
-    margin-bottom: 60px;
-}
-
-.food-menu-list-menu ul {
-    list-style: outside none none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.food-menu-list-menu ul li {
-    border: 1px solid;
-    color: #1e1e1f;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0 2px;
-    padding: 3px 10px;
-    text-transform: uppercase;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-.food-menu-list-menu ul li:hover,
-.food-menu-list-menu ul li.active {
-    background: #ca3d26 none repeat scroll 0 0;
-    border-color: #ca3d26;
-    color: #fff;
-}
-
-.single-menu .single-menu-details {
-    border-bottom: 1px solid #E4E4E4;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-    padding-left: 140px;
-    position: relative;
 }
 
 .food-img-1 img {
@@ -404,119 +267,12 @@ a.home-reservation-button:hover {
     box-shadow: 0 0 0 10px #ddd;
 }
 
-.food-menu-details {
-    color: #1e1e1f;
-    padding: 0;
-    text-align: inherit;
-}
-
-.food-menu-details h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-
-}
-
-.food-menu-details p span {
-    display: inline-block;
-    width: 30%;
-}
-
-.food-menu-details span {
-    color: #ca3d26;
-
-}
-
-.menu-speacification {
-    margin-bottom: 0;
-}
-
-.food-menu-list-menu {
-    column-count: 2;
-    column-gap: 30px;
-    margin: 6px 20px;
-}
-
-
-/*END MENU AREA*/
-
-/* MENU 2 AREA*/
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.container {
-    width: 1170px;
-}
-
-.header span {
-    font-family: 'Allura' cursive;
-    color: #ffcc00;
-    line-height: 30px;
-}
-
-.dart-fs-48 {
-    font-size: 2.7em;
-}
-
-.header {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.header h1 {
-    color: #333;
-    letter-spacing: 2px;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.header hr {
-    background-color: #333333;
-    height: 2px;
-    width: 100px;
-    border: none;
-    margin-top: 10px;
-}
-
-.menu-food .menu-food-pennal li.food-spicy,
-.menu-food .menu-food-pennal li:hover {
-    padding: 12px 0;
-    position: relative;
-    color: #fff;
-    background-color: #ffcc00;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 10px;
-    transition: all 500ms ease-in-out;
-}
-
-.menu-food .menu-food-pennal {
-    padding: 0;
-    margin: 10px;
-    height: 100px;
-    border-bottom: 3px solid #ffcc00;
-}
-
-.menu-food .menu-food-pennal li {
-    float: left;
-    list-style-type: none;
-    text-align: center;
-    width: 10%;
-    color: #666;
-    padding: 25px 0;
-    font-size: 15px;
-    display: block;
-    cursor: pointer;
-    height: 98px;
-}
-
-.hinh-1 {
-    border-radius: 50%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
 }
 
 .menu-list-1 .dish-name {
@@ -535,7 +291,8 @@ a.home-reservation-button:hover {
     min-height: 110px;
     padding-bottom: 40px;
     border-bottom: 1px dashed #ccc;
-
+    column-count: 2;
+    margin: 6px 80px;
 }
 
 .food-list {
@@ -543,8 +300,7 @@ a.home-reservation-button:hover {
     background-color: #fff;
     column-count: 2;
     column-gap: 1%;
-    margin-left: 5%;
-
+    padding-left: 11%;
 }
 
 .mon-1 {
@@ -554,78 +310,7 @@ a.home-reservation-button:hover {
     padding-right: 45px;
 }
 
-.menu-food .menu-food-pennal .food-1,
-.menu-food .menu-food-pennal .food-2,
-.menu-food .menu-food-pennal .food-3,
-.menu-food .menu-food-pennal .food-4,
-.menu-food .menu-food-pennal .food-5,
-.menu-food .menu-food-pennal .food-6,
-.menu-food .menu-food-pennal .food-7,
-.menu-food .menu-food-pennal .food-8,
-.menu-food .menu-food-pennal .food-9,
-.menu-food .menu-food-pennal .food-10 {
-    background-image: url(https://www.multipurposethemes.com/html-templates/morsel/images/food_icons.png);
-    height: 46px;
-    width: 46px;
-    background-repeat: no-repeat;
-    transition: all ease 0.2s;
-    margin: 0 auto;
-    margin-bottom: 5px;
-}
-
-menu-food .menu-food-pennal li span {
-    display: none;
-}
-
-.menu-food .menu-food-pennal .food-1 {
-    background-position: 0 0;
-}
-
-.menu-food .menu-food-pennal .food-2 {
-    background-position: -115px -0px;
-}
-
-.menu-food .menu-food-pennal .food-3 {
-    background-position: -232px 0;
-}
-
-.menu-food .menu-food-pennal .food-4 {
-    background-position: -349px 0;
-}
-
-.menu-food .menu-food-pennal .food-5 {
-    background-position: -467px 0;
-}
-
-.menu-food .menu-food-pennal .food-6 {
-    background-position: -583px 0;
-}
-
-.menu-food .menu-food-pennal .food-7 {
-    background-position: -699px 0;
-}
-
-.menu-food .menu-food-pennal .food-8 {
-    background-position: -815px 0;
-}
-
-.menu-food .menu-food-pennal .food-9 {
-    background-position: -931px 0;
-}
-
-.menu-food .menu-food-pennal .food-10 {
-    background-position: -1047px 0;
-}
-
-.menu-list-1 {
-    column-count: 2;
-    /* column-gap: 30px; */
-    margin: 6px 80px;
-}
-
-/*END MENU 2 AREA*/
-
-
+/*FIN AREA DE MENUS*/
 
 /*--------------------------------- 
     5. SECCION FORMULARIO 
@@ -670,32 +355,13 @@ menu-food .menu-food-pennal li span {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    background-image: url('../fondo.jpg');
-    background-size: cover;
-    background-position: center center;
-
-}
-
-.info_title
-
-/* ,
-  .info_items */
-    {
-    position: relative;
-    z-index: 2;
-    color: #fff;
 }
 
 .info_title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
     margin-bottom: 60px;
-}
-
-.info_title span {
-    font-size: 100px;
-    display: block;
-    text-align: center;
-    margin-bottom: 15px;
 }
 
 .info_title h2 {
@@ -708,9 +374,6 @@ menu-food .menu-food-pennal li span {
 form.form_reserva {
     width: 62%;
     padding: 30px 40px;
-
-
-
 }
 
 form.form_reserva h2 {
@@ -720,13 +383,8 @@ form.form_reserva h2 {
     margin-bottom: 30px;
 }
 
-
-
 form.form_reserva .user_info {
     display: block;
-
-
-
 }
 
 .columnas-form {
@@ -743,10 +401,8 @@ form.form_reserva option {
     width: 100%;
     padding: 8px 0px 5px;
     margin-bottom: 20px;
-
     border: none;
     border-bottom: 2px solid #D1D1D1;
-
     font-family: 'Open sans';
     color: #5A5A5A;
     font-size: 14px;
@@ -763,17 +419,14 @@ form.form_reserva input[type="radio"] {
     width: 3%;
 }
 
-form.form_reserva button[type="button"] {
+form.form_reserva button {
     width: 180px;
     background: #fff;
     padding: 10px;
     border-radius: 25px;
     border: 1px solid;
     border-color: #ca3d26;
-    
-
     align-self: flex-end;
-
     color: #ca3d26;
     font-family: 'Open sans';
     font-size: 16px;
@@ -782,14 +435,14 @@ form.form_reserva button[type="button"] {
     transition: all 500ms;
 }
 
-form.form_reserva button[type="button"]:hover {
+form.form_reserva button:hover {
     transform: scale(1.1);
     background: #ca3d26;
     color: #fff;
 }
 
 /*formulario para js*/
-.formparajs{
+.formparajs {
     width: 300px;
     height: 510px;
     position: absolute;
@@ -798,7 +451,7 @@ form.form_reserva button[type="button"]:hover {
     background-color: #ca3d26;
     text-align: center;
     color: #000000;
-    display:none;
+    display: none;
 }
 
 
@@ -817,7 +470,6 @@ form.form_reserva button[type="button"]:hover {
 .footer-content {
     padding-top: 3%;
 }
-
 
 .footer-area a {
     color: #ca3d26;
