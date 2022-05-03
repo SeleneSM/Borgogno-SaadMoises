@@ -490,6 +490,14 @@ form.form_reserva button:hover {
 -----------------------------------*/
 
 #canvas {
-    visibility: hidden;
     display: none;
+    position: relative;
+    width: 25%;
+    height: 80%;
+    margin-bottom: 60px;
+    margin-left: 37.5%;
+    border-style:dotted;
+    border-color: #ca3d26;
+    z-index: 1;
+
 }
