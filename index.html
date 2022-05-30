@@ -63,9 +63,11 @@ Todo el body esta en el siguiente orden:
             <div class="slider-area">
                 <div class="pogoSlider">
                     <div class="pogoSlider-slide">
-                        <h2 class="pogoSlider-slide-element">
-                            <p>Bienvenido a</p>
-                        </h2>
+                        <div>
+                            <h2 class="pogoSlider-slide-element">
+                                Bienvenido a
+                            </h2>
+                        </div>
                         <h1 class="pogoSlider-slide-element">
                             <span>UCC</span> Restaurante vegano
                         </h1>
@@ -74,16 +76,20 @@ Todo el body esta en el siguiente orden:
                         </h3>
                     </div>
                     <div class="pogoSlider-slide">
-                        <h2 class="pogoSlider-slide-element">
-                            <p>Nuestros Menus</p>
-                        </h2>
+                        <div>
+                            <h2 class="pogoSlider-slide-element">
+                                Nuestros Menus
+                            </h2>
+                        </div>
                         <h1 class="pogoSlider-slide-element">Mira que hay de <span>nuevo</span> hoy</h1>
                         <h3 class="pogoSlider-slide-element"><a href="#menu"> Ver Menus</a></h3>
                     </div>
                     <div class="pogoSlider-slide">
-                        <h2 class="pogoSlider-slide-element">
-                            <p>¿Estas listo</p>
-                        </h2>
+                        <div>
+                            <h2 class="pogoSlider-slide-element">
+                                ¿Estas listo
+                            </h2>
+                        </div>
                         <h1 class="pogoSlider-slide-element">para
                             <span>disfrutar </span> con nosotros?
                         </h1>
@@ -92,16 +98,20 @@ Todo el body esta en el siguiente orden:
                         </h3>
                     </div>
                     <div class="pogoSlider-slide">
-                        <h2 class="pogoSlider-slide-element">
-                            <p>Nuestros Menus</p>
-                        </h2>
+                        <div>
+                            <h2 class="pogoSlider-slide-element">
+                                Nuestros Menus
+                            </h2>
+                        </div>
                         <h1 class="pogoSlider-slide-element">Mira que hay de <span>nuevo</span> hoy</h1>
                         <h3 class="pogoSlider-slide-element"><a href="#menu"> Ver Menus</a></h3>
                     </div>
                     <div class="pogoSlider-slide">
-                        <h2 class="pogoSlider-slide-element">
-                            <p>Bienvenido a</p>
-                        </h2>
+                        <div>
+                            <h2 class="pogoSlider-slide-element">
+                                Bienvenido a
+                            </h2>
+                        </div>
                         <h1 class="pogoSlider-slide-element">
                             <span>UCC</span> Restaurante vegano
                         </h1>
@@ -211,58 +221,57 @@ Todo el body esta en el siguiente orden:
     <!-----------------------------
         3.AREA DE FORMULARIOS 
     ------------------------------>
-    <!-- /*-----------------------------------------------------------
-    Formulario oculto, debe aparecer cuando usemos js,
-    sera visible cuando clickeen el boton "Reservar Mesa"
------------------------------------------------------------*/ -->
-
-    <section class="formparajs" id="formparajs">
-
-        <div>
-            <label for="menu_1">
-                <p>Risotto: </p>
-            </label>
-            <input type="number" id="menu_1" placeholder="Cantidad de Platos">
-            <label for="menu_2">
-                <p>Hamburguesas: </p>
-            </label>
-            <input type="number" id="menu_2" placeholder="Cantidad de Platos">
-            <label for="menu_3">
-                <p>Cheeseecake: </p>
-            </label>
-            <input type="number" id="menu_3" placeholder="Cantidad de Platos">
-            <label for="menu_4">
-                <p>Wrap: </p>
-            </label>
-            <input type="number" id="menu_4" placeholder="Cantidad de Platos">
-            <label for="menu_5">
-                <p>Sushi: </p>
-            </label>
-            <input type="number" id="menu_5" placeholder="Cantidad de Platos">
-            <label for="menu_6">
-                <p>Tiramisu: </p>
-            </label>
-            <input type="number" id="menu_6" placeholder="Cantidad de Platos">
-            <div>
-                <p>
-                    <button value="Cerrar">Cerrar</button>
-                    <button value="Reservar">Reservar</button>
-                </p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Fin del formulario oculto -->
 
     <!--FORMULARIO VISIBLE-->
     <section class="form" id="reservation">
 
         <div class="form_wrap">
             <section class="cantact_info">
+                <!-- /*-----------------------------------------------------------
+                Formulario oculto, debe aparecer cuando usemos js,
+                sera visible cuando clickeen el boton "Reservar Mesa"
+                -----------------------------------------------------------*/ -->
+
+                <section class="formparajs form_reserva" id="formparajs">
+
+
+                    <label for="menu_1"><br>
+                        Risotto:
+                    </label>
+                    <input type="number" id="menu_1" placeholder="Cantidad de Platos">
+                    <label for="menu_2">
+                        Hamburguesas:
+                    </label>
+                    <input type="number" id="menu_2" placeholder="Cantidad de Platos">
+                    <label for="menu_3">
+                        Cheeseecake:
+                    </label>
+                    <input type="number" id="menu_3" placeholder="Cantidad de Platos">
+                    <label for="menu_4">
+                        Wrap:
+                    </label>
+                    <input type="number" id="menu_4" placeholder="Cantidad de Platos">
+                    <label for="menu_5">
+                        Sushi:
+                    </label>
+                    <input type="number" id="menu_5" placeholder="Cantidad de Platos">
+                    <label for="menu_6">
+                        Tiramisu:
+                    </label>
+                    <input type="number" id="menu_6" placeholder="Cantidad de Platos">
+                    <div>
+                        <p>
+                            <button value="Cerrar" onclick="cerrar()" class="boton">Cerrar</button>
+                            <button value="Reservar" onclick="reservar()" class="boton">Reservar</button>
+                        </p>
+                    </div>
+
+
+                </section>
+                <!-- Fin del formulario oculto -->
                 <section class="info_title">
                     <h2>
-                        <P>RESERVA TU</P>MESA AHORA
+                        <span>RESERVA TU</span><br><br><span>MESA AHORA</span>
                     </h2>
                 </section>
             </section>
@@ -270,36 +279,39 @@ Todo el body esta en el siguiente orden:
                 <h2>Reservar para:</h2>
                 <div class="user_info">
                     <div class="columnas-form">
-                        <p>
+
+                        <p class="parrafo">
                             <label for="names">Nombre</label>
                             <input type="text" id="names" placeholder="Nombre...">
                         </p>
-                        <p>
+                        <p class="parrafo">
                             <label for="phone">Telefono / Celular</label>
                             <input type="number" id="phone" placeholder="Numero de contacto...">
                         </p>
-                        <p>
+                        <p class="parrafo">
                             <label for="email">Correo electronico</label>
                             <input type="email" id="email" placeholder="ejemplo@gmail.com">
                         </p>
-                        <p>
-                            <label for="fecha">Fecha</label>
-                            <input type="date" id="fecha">
-                        </p>
-                        <p>
-                            <label for="hora">Hora</label>
-                            <input type="time" id="hora">
-                        </p>
-                        <p>
+
+                        <p class="parrafo">
                             <label for="personas">Cantidad de Personas:</label>
                             <input type="number" id="personas" placeholder="Cantidad de Personas:">
                         </p>
+                        <p class="parrafo">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" id="fecha">
+                        </p>
+                        <p class="parrafo">
+                            <label for="hora">Hora</label>
+                            <input type="time" id="hora">
+                        </p>
+
                     </div>
                     ¿Decidieron que van a comer? <input type="radio" name="comida" value="si" id="si"> <label
                         for="si">Si</label>
                     <input type="radio" name="comida" value="no" id="no"><label for="no">Decidir en el Local</label>
                     <br>
-                    <button type="button" value="Reservar Mesa" id="btnSend">Reservar Mesa</button>
+                    <button type="button" value="Reservar Mesa" id="btnSend" onclick="formon()">Reservar Mesa</button>
                 </div>
             </form>
         </div>
@@ -309,7 +321,12 @@ Todo el body esta en el siguiente orden:
     <!-----------------------------
         4.AREA DE CANVAS 
     ------------------------------>
-    <canvas id="canvas"></canvas>
+    <section id="canvas">
+        <div><button id="cerrarcanva" onclick="cerrar()" class="boton">x</button></div>
+        <canvas>
+
+        </canvas>
+    </section>
 
     <!-----------------------------
         5.AREA CONTACTO 
@@ -328,7 +345,7 @@ Todo el body esta en el siguiente orden:
                     <p><a href="callto:+543518731018">+54 351 873 1018</a></p>
                 </div>
             </div>
-            </div>
+        </div>
         </div>
 
     </footer>
@@ -337,5 +354,8 @@ Todo el body esta en el siguiente orden:
 
 
 </body>
+
+
+<script type="text/javascript" src="js/index.js"></script>
 
 </html>

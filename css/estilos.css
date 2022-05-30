@@ -14,6 +14,8 @@ Todo el CCS esta en el siguiente orden:
 /*------------------------------
     1.BASE CSS
 ------------------------------*/
+
+
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lato:400,700|PT+Sans+Narrow:400,700');
 
 h1,
@@ -25,6 +27,7 @@ h6 {
     margin: 0 0 15px;
     font-family: "PT Sans Narrow", sans-serif;
     font-weight: 700;
+    
 }
 
 html,
@@ -91,6 +94,7 @@ body {
     z-index: 2;
     margin: 0 0 0 0;
     position: fixed;
+    box-shadow: 0 0 10px 2px #ccc8c8;
 }
 
 .nav {
@@ -139,7 +143,9 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
-
+.slider-area h2{
+    line-height: 170px;
+}
 .fade {
     position: absolute;
     background-color: #1a1a1a;
@@ -181,12 +187,16 @@ div#slider figure {
 
 .pogoSlider a {
     color: #ccc;
+    text-decoration: none;
 }
 
 .pogoSlider-slide {
     width: 20%;
     height: 100%;
     float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 div#slider {
@@ -362,11 +372,14 @@ a.home-reservation-button:hover {
     z-index: 2;
     color: #fff;
     margin-bottom: 60px;
+
 }
 
 .info_title h2 {
     font-size: 35px;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 
@@ -385,19 +398,28 @@ form.form_reserva h2 {
 
 form.form_reserva .user_info {
     display: block;
+
 }
 
 .columnas-form {
-    column-count: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 10px;
+    /* column-count: 2; */
 
 }
 
-form.form_reserva label {
+.form_reserva label {
     font-weight: 600;
 }
+.parrafo{
+    height: 80.5px;
+    text-decoration: none;
+}
 
-form.form_reserva input,
-form.form_reserva option {
+.form_reserva input,
+.form_reserva option {
     width: 100%;
     padding: 8px 0px 5px;
     margin-bottom: 20px;
@@ -414,8 +436,7 @@ form.form_reserva option {
     min-width: 100%;
     max-height: 90px;
 }
-
-form.form_reserva input[type="radio"] {
+.form_reserva input[type="radio"] {
     width: 3%;
 }
 
@@ -442,16 +463,27 @@ form.form_reserva button:hover {
 }
 
 /*formulario para js*/
-.formparajs {
+#formparajs {
+    display: none;
+    flex-direction: column;
     width: 300px;
     height: 510px;
     position: absolute;
-    margin: 7% 14%;
-    z-index: 1;
+    /* margin: 7% 14%; */
+    margin: auto auto;
+    z-index: 3;
     background-color: #ca3d26;
-    text-align: center;
     color: #000000;
-    display: none;
+}
+#formparajs input{
+    border-radius: 7px;
+    margin-bottom: 15px;
+    
+}
+
+#formparajs div{
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -500,4 +532,24 @@ form.form_reserva button:hover {
     border-color: #ca3d26;
     z-index: 1;
 
+}
+
+#canvas div{
+    float:right;
+}
+
+.boton{
+    border: 1px solid;
+    border-color: #ca3d26;
+    background: #fff;
+    color: #ca3d26;
+    cursor: pointer;
+    transition: all 500ms;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    background: #ca3d26;
+    color: #fff;
 }
