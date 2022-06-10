@@ -214,7 +214,7 @@ Todo el body esta en el siguiente orden:
                     </div>
                 </div>
             </div>
-
+        </div>
     </section>
     <!--FIN AREA HOME SLIDER-->
 
@@ -223,7 +223,7 @@ Todo el body esta en el siguiente orden:
     ------------------------------>
 
     <!--FORMULARIO VISIBLE-->
-    <section class="form" id="reservation">
+    <section class="form" id="reservation" >
 
         <div class="form_wrap">
             <section class="cantact_info">
@@ -238,31 +238,31 @@ Todo el body esta en el siguiente orden:
                     <label for="menu_1"><br>
                         Risotto:
                     </label>
-                    <input type="number" id="menu_1" placeholder="Cantidad de Platos">
+                    <input type="number" id="menu_1" placeholder=" Cantidad de Platos">
                     <label for="menu_2">
                         Hamburguesas:
                     </label>
-                    <input type="number" id="menu_2" placeholder="Cantidad de Platos">
+                    <input type="number" id="menu_2" placeholder=" Cantidad de Platos">
                     <label for="menu_3">
                         Cheeseecake:
                     </label>
-                    <input type="number" id="menu_3" placeholder="Cantidad de Platos">
+                    <input type="number" id="menu_3" placeholder=" Cantidad de Platos">
                     <label for="menu_4">
                         Wrap:
                     </label>
-                    <input type="number" id="menu_4" placeholder="Cantidad de Platos">
+                    <input type="number" id="menu_4" placeholder=" Cantidad de Platos">
                     <label for="menu_5">
                         Sushi:
                     </label>
-                    <input type="number" id="menu_5" placeholder="Cantidad de Platos">
+                    <input type="number" id="menu_5" placeholder=" Cantidad de Platos">
                     <label for="menu_6">
                         Tiramisu:
                     </label>
-                    <input type="number" id="menu_6" placeholder="Cantidad de Platos">
+                    <input type="number" id="menu_6" placeholder=" Cantidad de Platos">
                     <div>
                         <p>
-                            <button value="Cerrar" onclick="cerrar()" class="boton">Cerrar</button>
-                            <button value="Reservar" onclick="reservar()" class="boton">Reservar</button>
+                            <button value="Cerrar" onclick="cerrarform()" class="boton">Cerrar</button>
+                            <button value="Reservar" onclick="reservar(),PlayAnimation(animation_hand)"  class="boton">Reservar</button>
                         </p>
                     </div>
 
@@ -322,10 +322,15 @@ Todo el body esta en el siguiente orden:
         4.AREA DE CANVAS 
     ------------------------------>
     <section id="canvas">
-        <div><button id="cerrarcanva" onclick="cerrar()" class="boton">x</button></div>
-        <canvas>
+        <div class="canvas_container">            
+            <canvas id="mycanvas" class="ejer" width="300px" height="500px"></canvas>
+            <div class="canvas_botones">
+                <button id="cerrarcanva" onclick="cerrarcanva(),ClearCanvas()" class="boton">Cerrar</button>
+                <button id="printcanvas" onclick="PrintElem(mycanvas.id)" class="boton">Imprimir Ticket</button>
+            </div>
+            
+                    </div>
 
-        </canvas>
     </section>
 
     <!-----------------------------

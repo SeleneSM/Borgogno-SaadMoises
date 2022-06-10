@@ -255,9 +255,12 @@ a.home-reservation-button:hover {
     position: relative;
     width: 100%;
     z-index: -1;
-    padding-top: 4%;
+    padding-top: 5%;
+    
 }
-
+.menus-area .area-title{
+    margin-bottom: 0px;
+}
 .food-img-1 img {
     transition: all 500ms;
 }
@@ -283,6 +286,9 @@ a.home-reservation-button:hover {
     padding-left: 0;
     padding-right: 0;
     width: 100%;
+ /*    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(2); */
 }
 
 .menu-list-1 .dish-name {
@@ -297,27 +303,31 @@ a.home-reservation-button:hover {
 }
 
 .menu-list-1 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     min-height: 110px;
     padding-bottom: 40px;
     border-bottom: 1px dashed #ccc;
-    column-count: 2;
+    display: flex;
     margin: 6px 80px;
 }
 
 .food-list {
-    padding-top: 30px;
     background-color: #fff;
-    column-count: 2;
     column-gap: 1%;
     padding-left: 11%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3);
+    
 }
 
 .mon-1 {
     position: relative;
     min-height: 1px;
+    max-height: 150px;
     padding-left: 45px;
     padding-right: 45px;
+    margin-top: 20px;
 }
 
 /*FIN AREA DE MENUS*/
@@ -521,21 +531,26 @@ form.form_reserva button:hover {
     7. CANVAS
 -----------------------------------*/
 
-#canvas {
-    display: none;
+.canvas_container {
     position: relative;
-    width: 25%;
-    height: 80%;
+    width: 300px;
+    height: 525px;
     margin-bottom: 60px;
     margin-left: 37.5%;
     border-style:dotted;
     border-color: #ca3d26;
     z-index: 1;
-
+    
 }
-
-#canvas div{
-    float:right;
+#canvas{
+    display: none;
+    padding-top: 80px;
+}
+#canvas div .canvas_botones{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    gap: 5px;
 }
 
 .boton{
