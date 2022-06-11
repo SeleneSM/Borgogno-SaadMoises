@@ -57,11 +57,6 @@
   * Dibuja el contenido del canvas
   * @method draw
   **/
-  /**    
-      * Imprime un canvas en PDF
-      * @method PrintElem
-      * @param (id) Id del canvas que se va a imprimir
-  **/
 
 /* Precios de las comidas */
 var Precio_Risotto = 780;
@@ -108,7 +103,9 @@ function borrarform() {
 
 function cerrarcanva() {
     Canvas.style.display = "none";
-    borrarform();
+    PauseAnimation();
+    x = 0;
+    y = 160;
 }
 
 function cerrarform() {
@@ -138,6 +135,7 @@ function ActivarForm() {
 function formon() {
     if (Names.value !== "" && isNaN(Names.value) && Phone.value > 0 && Email.value !== "" && Fecha.value !== "" && Hora.value !== "" && Personas.value > 0 && document.querySelector('input[name="comida"]:checked').value === "si") {
         FormParaJS.style.display = "flex";
+        location.href="#reservation"
         bloquearForm();
     }
     else {
@@ -152,12 +150,10 @@ function formon() {
 
 function reservar() {
     if (Risotto.value !== "" || Hamburguesa.value !== "" || Cheeseecake.value !== "" || Wrap.value !== "" || Sushi.value !== "" || Tiramisu.value !== "") {
-        Canvas.style.display = "block";
+        Canvas.style.display = "flex";
         location.href = "#canvas";
         Total = Risotto.value * Precio_Risotto + Hamburguesa.value * Precio_Hamburguesas + Cheeseecake.value * Precio_Cheeseecake + Wrap.value * Precio_Wrap + Sushi.value * Precio_Sushi + Tiramisu.value * Precio_Tiramisu;
-        borrarform();
-        cerrarform();
-        ActivarForm();
+        PlayAnimation(animation_hand);
     }
     else {
         alert('Completa todos los campos por favor');
@@ -174,67 +170,66 @@ var widthMax = mycanvas.width;
 var heightMax = mycanvas.height;
 
 function ClearCanvas() {
-    mycanvas.width = mycanvas.width;   
+    mycanvas.width = mycanvas.width;
 }
 
 function WriteText(content, posx, posy) {
     ctx.font = "italic small-caps bold 12px arial";
     ctx.fillStyle = "#000000";
     ctx.fillText(content, posx, posy);
-    
+
 }
 
+var x = 0;
+var dx = 3
+var y = 160;
+var dy = 20;
 var a;
-function PlayAnimation(fname){
-    a = setInterval(fname, 30);
+function PlayAnimation(fname) {
+    a = setInterval(fname, 10);
 }
-function PauseAnimation(){
+function PauseAnimation() {
     clearInterval(a);
 }
 
-var x=0;
-var dx=5
-var y=60;
-var dy=60
-function animation_hand(){
+function animation_hand() {
     draw();
     ctx.clearRect(0, y, widthMax, heightMax);
-    ctx.clearRect(x, y-dy, widthMax-x, dy);
+    ctx.clearRect(x, y - dy, widthMax - x, dy);
+    var img = new Image();
+    img.src = "img/main_logo_black.png";
+    ctx.drawImage(img, 87, 59.75, 180 * 0.7, 65 * 0.7);
     var img = new Image();
     img.src = "img/hand.png";
-    img.onload = function(){
-        ctx.drawImage(img, x, y, 281/6, 721/6);
+    ctx.drawImage(img, x, y, 20, 20);
+
+    if (x > mycanvas.width) {
+        x = 0;
+        y += dy;
     }
-    
-    if(x>mycanvas.width){
-        x=0;
-        y+=dy;
-    }
-    x+=dx;
-    if(y>heightMax && x>widthMax){
+    x += dx;
+    if (y > heightMax && x > widthMax) {
         PauseAnimation();
+        cerrarform();
+        borrarform();
+        ActivarForm();
     }
 }
 function draw() {
-    
+
     var margenderecho = 60;
     var interline = 20;
     var margenizquierdo = 20;
-    var img = new Image();
-    img.src = "img/main_logo_black.png";
-    img.onload = function () {
-        ctx.drawImage(img, 87, 9.75, 180 * 0.7, 65 * 0.7);
-    }
     ClearCanvas();
-    var starttxt=110;
+    var starttxt = 160;
     WriteText("Reserva a nombre de: ", margenizquierdo, starttxt - interline);
     WriteText(Names.value, margenizquierdo, starttxt);
-    WriteText("Cantidad de Personas: "+Personas.value, margenizquierdo, starttxt + interline);
-    WriteText("Fecha: "+Fecha.value, margenizquierdo, starttxt + 2 * interline);
-    WriteText("Hora: "+Hora.value, margenizquierdo, starttxt + 3 * interline);
+    WriteText("Cantidad de Personas: " + Personas.value, margenizquierdo, starttxt + interline);
+    WriteText("Fecha: " + Fecha.value, margenizquierdo, starttxt + 2 * interline);
+    WriteText("Hora: " + Hora.value, margenizquierdo, starttxt + 3 * interline);
 
-    starttxt = 230;
-    WriteText("Plato", margenizquierdo, starttxt - 1.5 * interline);
+    starttxt = 280;
+    WriteText("Plato", margenizquierdo, starttxt - 1.2 * interline);
     WriteText("Risotto", margenizquierdo, starttxt);
     WriteText("Hamburguesas", margenizquierdo, starttxt + interline);
     WriteText("Wrap", margenizquierdo, starttxt + 2 * interline);
@@ -242,8 +237,9 @@ function draw() {
     WriteText("Cheeseecake", margenizquierdo, starttxt + 4 * interline);
     WriteText("Tiramisu", margenizquierdo, starttxt + 5 * interline);
     WriteText("Total", margenizquierdo, starttxt + 7 * interline);
+    WriteText("Te esperamos!", 100, starttxt + 10 * interline);
 
-    WriteText("Cant", widthMax - margenderecho, starttxt - 1.5 * interline);
+    WriteText("Cant", widthMax - margenderecho, starttxt - 1.2 * interline);
     WriteText(Risotto.value, widthMax - margenderecho, starttxt);
     WriteText(Hamburguesa.value, widthMax - margenderecho, starttxt + interline);
     WriteText(Wrap.value, widthMax - margenderecho, starttxt + 2 * interline);
@@ -252,29 +248,4 @@ function draw() {
     WriteText(Tiramisu.value, widthMax - margenderecho, starttxt + 5 * interline);
     WriteText("$ " + Total, widthMax - margenderecho, starttxt + 7 * interline);
 
-}
-
-function PrintElem(IDcanvas)
-{
-
-    const dataUrl = document.getElementById(IDcanvas).toDataURL(); 
-
-    let windowContent = '<!DOCTYPE html>';
-    windowContent += '<html>';
-    windowContent += '<head><title>Print canvas</title></head>';
-    windowContent += '<body>';
-    windowContent += '<img src="' + dataUrl + '">';
-    windowContent += '</body>';
-    windowContent += '</html>';
-    
-    const printWin = window.open('', '', 'width=' + screen.availWidth + ',height=' + screen.availHeight);
-    printWin.document.open();
-    printWin.document.write(windowContent); 
-    
-    printWin.document.addEventListener('load', function() {
-        printWin.focus();
-        printWin.print();
-        printWin.document.close();
-        printWin.close();            
-    }, true);
 }

@@ -183,7 +183,7 @@ Todo el body esta en el siguiente orden:
                         <div class="dish-name">
                             <h4> WRAP </h4>
                             <p>Lechuga, zanahoria
-                                y cebolla morada</p>
+                                y cebolla</p>
                             <div class="dishs-price"><span>$700</span></div>
                         </div>
                     </div>
@@ -223,10 +223,15 @@ Todo el body esta en el siguiente orden:
     ------------------------------>
 
     <!--FORMULARIO VISIBLE-->
-    <section class="form" id="reservation" >
+    <section class="form" id="reservation">
 
         <div class="form_wrap">
             <section class="cantact_info">
+                <section class="info_title">
+                    <h2>
+                        <span>RESERVA TU</span><br><br><span>MESA AHORA</span>
+                    </h2>
+                </section>
                 <!-- /*-----------------------------------------------------------
                 Formulario oculto, debe aparecer cuando usemos js,
                 sera visible cuando clickeen el boton "Reservar Mesa"
@@ -234,8 +239,8 @@ Todo el body esta en el siguiente orden:
 
                 <section class="formparajs form_reserva" id="formparajs">
 
-
-                    <label for="menu_1"><br>
+                    <h2>¿Cuantos platos quieres reservar?</h2>
+                    <label for="menu_1">
                         Risotto:
                     </label>
                     <input type="number" id="menu_1" placeholder=" Cantidad de Platos">
@@ -260,20 +265,15 @@ Todo el body esta en el siguiente orden:
                     </label>
                     <input type="number" id="menu_6" placeholder=" Cantidad de Platos">
                     <div>
-                        <p>
-                            <button value="Cerrar" onclick="cerrarform()" class="boton">Cerrar</button>
-                            <button value="Reservar" onclick="reservar(),PlayAnimation(animation_hand)"  class="boton">Reservar</button>
-                        </p>
+                        
+                            <button value="Cerrar" onclick="cerrarform(), ActivarForm()" class="boton">Cancelar</button>
+                            <button value="Reservar" onclick="reservar()" class="boton">Reservar</button>
+                        
                     </div>
 
 
                 </section>
                 <!-- Fin del formulario oculto -->
-                <section class="info_title">
-                    <h2>
-                        <span>RESERVA TU</span><br><br><span>MESA AHORA</span>
-                    </h2>
-                </section>
             </section>
             <form class="form_reserva">
                 <h2>Reservar para:</h2>
@@ -311,7 +311,8 @@ Todo el body esta en el siguiente orden:
                         for="si">Si</label>
                     <input type="radio" name="comida" value="no" id="no"><label for="no">Decidir en el Local</label>
                     <br>
-                    <button type="button" value="Reservar Mesa" id="btnSend" onclick="formon()">Reservar Mesa</button>
+                    <button type="button" value="Reservar Mesa" id="btnSend"
+                        onclick="formon(), ClearCanvas(), cerrarcanva()">Reservar Mesa</button>
                 </div>
             </form>
         </div>
@@ -322,14 +323,15 @@ Todo el body esta en el siguiente orden:
         4.AREA DE CANVAS 
     ------------------------------>
     <section id="canvas">
-        <div class="canvas_container">            
+        <div class="canvas_container">
             <canvas id="mycanvas" class="ejer" width="300px" height="500px"></canvas>
             <div class="canvas_botones">
-                <button id="cerrarcanva" onclick="cerrarcanva(),ClearCanvas()" class="boton">Cerrar</button>
-                <button id="printcanvas" onclick="PrintElem(mycanvas.id)" class="boton">Imprimir Ticket</button>
+                <button id="cerrarcanva" onclick="cerrarcanva(),ClearCanvas(), borrarform()"
+                    class="boton">Cerrar</button>
+                <!-- <button id="printcanvas" onclick="PrintElem()" class="boton">Imprimir Ticket</button> -->
             </div>
-            
-                    </div>
+
+        </div>
 
     </section>
 

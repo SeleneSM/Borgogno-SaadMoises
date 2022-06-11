@@ -96,6 +96,11 @@ body {
     position: fixed;
     box-shadow: 0 0 10px 2px #ccc8c8;
 }
+@media (max-width: 480px) {
+    .navbackground{
+        height: 16%;
+    }
+}
 
 .nav {
     list-style-type: none;
@@ -146,6 +151,11 @@ body {
 .slider-area h2{
     line-height: 170px;
 }
+@media (max-width: 480px) {
+    .slider-area h2{
+        line-height: 80px;
+    }   
+}
 .fade {
     position: absolute;
     background-color: #1a1a1a;
@@ -156,11 +166,21 @@ body {
     background-image: url("../img/pattarn.png");
     background-repeat: repeat;
 }
+@media (max-width: 480px) {
+    .fade{
+        height: 400px;
+    }
+}
 
 div#slider figure img {
     width: 20%;
     height: 100%;
     float: left;
+}
+@media (max-width: 480px) {
+    div#slider figure img{
+        height: 400px;
+    }
 }
 
 div#slider figure {
@@ -184,6 +204,11 @@ div#slider figure {
     overflow: hidden;
     position: absolute;
 }
+@media (max-width: 480px) {
+    .pogoSlider{
+        top:5%;
+    }
+}
 
 .pogoSlider a {
     color: #ccc;
@@ -198,6 +223,12 @@ div#slider figure {
     flex-direction: column;
     align-items: center;
 }
+@media (max-width: 480px) {
+    .pogoSlider-slide{
+        height: 400px;
+        transform: scale(0.5);
+    }
+}
 
 div#slider {
     overflow: hidden;
@@ -208,7 +239,9 @@ div#slider {
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
+    line-height: 1em;
 }
+
 
 .slider-area h1 span {
     font-weight: 700;
@@ -283,9 +316,10 @@ a.home-reservation-button:hover {
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 0;
-    padding-right: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
  /*    height: 100%;
     display: grid;
     grid-template-rows: repeat(2); */
@@ -314,20 +348,35 @@ a.home-reservation-button:hover {
 .food-list {
     background-color: #fff;
     column-gap: 1%;
-    padding-left: 11%;
+    margin-left: 11%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3);
+    justify-content: center;
     
 }
-
+@media (min-width: 1050px) {
+    .food-list{
+        width: 1050px;
+    }
+}
+@media (min-width: 768px) {
+    .food-list{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3);
+    }
+}
 .mon-1 {
     position: relative;
     min-height: 1px;
-    max-height: 150px;
     padding-left: 45px;
     padding-right: 45px;
     margin-top: 20px;
+}
+
+@media (min-width: 480px) {
+    .mon-1{
+        max-height: 150px;
+
+    }
 }
 
 /*FIN AREA DE MENUS*/
@@ -336,13 +385,17 @@ a.home-reservation-button:hover {
     5. SECCION FORMULARIO 
 ----------------------------------- */
 .form {
-    height: 100%;
     padding-top: 2%;
+    height: auto;
+}
+
+@media (min-width: 1050px) {
+    .form{
+        height: 100%;
+    }
 }
 
 .form_wrap {
-    width: 1050px;
-    height: 530px;
     margin: 50px auto;
     display: flex;
     z-index: -5;
@@ -350,25 +403,33 @@ a.home-reservation-button:hover {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: center;
 }
-
+@media (min-width: 1050px) {
+    .form_wrap{
+        width: 1050px;
+        height: 530px;
+        flex-direction: row;
+    }
+}
 /* Informacion de Contacto*/
 
 .cantact_info::before {
     content: '';
     width: 100%;
     height: 100%;
-
+    
     position: absolute;
     top: 0;
     left: 0;
-
+    
     background: #ca3d26;
     opacity: 100;
 }
 
 .cantact_info {
-    width: 38%;
+    width: 100%;
     position: relative;
     z-index: 0;
     display: flex;
@@ -376,15 +437,27 @@ a.home-reservation-button:hover {
     align-items: center;
     justify-content: center;
 }
+@media (min-width: 1050px) {     
+    .cantact_info{
+        width: 38%;
+        height: 530px;
+        
+    }
 
+}
 .info_title {
     position: relative;
     z-index: 2;
     color: #fff;
-    margin-bottom: 60px;
-
+    margin-bottom: 20px;
+    
 }
-
+@media (min-width: 768px) {
+    .info_title{
+        margin-bottom: 60px;
+        
+    }
+}
 .info_title h2 {
     font-size: 35px;
     text-align: center;
@@ -411,15 +484,18 @@ form.form_reserva .user_info {
 
 }
 
-.columnas-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    column-gap: 10px;
-    /* column-count: 2; */
 
+@media (min-width: 480px) {
+    .columnas-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 10px;
+        /* column-count: 2; */
+        
+    }
+    
 }
-
 .form_reserva label {
     font-weight: 600;
 }
@@ -451,7 +527,7 @@ form.form_reserva option {
 }
 
 form.form_reserva button {
-    width: 180px;
+    width: 100%;
     background: #fff;
     padding: 10px;
     border-radius: 25px;
@@ -465,6 +541,12 @@ form.form_reserva button {
     cursor: pointer;
     transition: all 500ms;
 }
+@media (min-width: 769px) {
+    form.form_reserva button{
+        width: 180px;
+
+    }
+}
 
 form.form_reserva button:hover {
     transform: scale(1.1);
@@ -475,15 +557,20 @@ form.form_reserva button:hover {
 /*formulario para js*/
 #formparajs {
     display: none;
-    flex-direction: column;
+    flex-direction: column  ;
     width: 300px;
     height: 510px;
-    position: absolute;
+    position: relative;
     /* margin: 7% 14%; */
     margin: auto auto;
     z-index: 3;
     background-color: #ca3d26;
     color: #000000;
+}
+@media (min-width: 1050px) {
+    #formparajs{
+        position:absolute;
+    }
 }
 #formparajs input{
     border-radius: 7px;
@@ -493,9 +580,13 @@ form.form_reserva button:hover {
 
 #formparajs div{
     display: flex;
-    justify-content: flex-end;
+    justify-content:space-around;
 }
-
+@media (min-width: 768px) {
+    #formparajs div{
+        justify-content:flex-end;
+    }
+}
 
 /*------------------------------
     6. SECCION FOOTER
@@ -536,7 +627,6 @@ form.form_reserva button:hover {
     width: 300px;
     height: 525px;
     margin-bottom: 60px;
-    margin-left: 37.5%;
     border-style:dotted;
     border-color: #ca3d26;
     z-index: 1;
@@ -545,6 +635,7 @@ form.form_reserva button:hover {
 #canvas{
     display: none;
     padding-top: 80px;
+    justify-content: center;
 }
 #canvas div .canvas_botones{
     display: flex;
@@ -556,13 +647,18 @@ form.form_reserva button:hover {
 .boton{
     border: 1px solid;
     border-color: #ca3d26;
+    height: 25px;
     background: #fff;
     color: #ca3d26;
     cursor: pointer;
     transition: all 500ms;
     border-radius: 5px;
 }
-
+@media (max-width: 768px) {
+    .boton{
+        width: 45%;
+    }
+}
 .boton:hover {
     transform: scale(1.1);
     background: #ca3d26;
