@@ -12,7 +12,12 @@ Todo el CCS esta en el siguiente orden:
 .about-area {
     background: rgba(0, 0, 0, 0) url("../img/about/home_three_about_bg.png") no-repeat scroll center bottom / contain;
     position: relative;
-    height: 69%;
+}
+@media (min-width: 480px) {
+    .about-area{
+        height: 69%;
+
+    }
 }
 
 .about-author-sign {
@@ -36,9 +41,15 @@ Todo el CCS esta en el siguiente orden:
 }
 
 .about-parrafo {
-    column-count: 2;
-    column-gap: 30px;
     margin: 40px 100px;
+}
+
+@media (min-width: 480px) {
+    .about-parrafo{
+        column-count: 2;
+        column-gap: 30px;
+
+    }
 }
 
 
@@ -52,9 +63,25 @@ Todo el CCS esta en el siguiente orden:
     position: relative;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
     font-family: tahoma;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1050px) {
+    .container_equipo{
+        width: 1050px;
+    }
+}
+.team{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+@media (max-width: 768px) {
+    .team{
+        flex-direction: column;
+        }
 }
 
 .team {
@@ -62,9 +89,8 @@ Todo el CCS esta en el siguiente orden:
 }
 
 .col-12 {
-    margin-left: 9.75%;
     float: left;
-    display: block;
+    display: flex;
 }
 
 .our-team {

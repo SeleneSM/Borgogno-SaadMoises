@@ -132,33 +132,153 @@ function ActivarForm() {
     Boton_principal.disabled = false;
 }
 
-function formon() {
-    if (Names.value !== "" && isNaN(Names.value) && Phone.value > 0 && Email.value !== "" && Fecha.value !== "" && Hora.value !== "" && Personas.value > 0 && document.querySelector('input[name="comida"]:checked').value === "si") {
-        FormParaJS.style.display = "flex";
-        location.href="#reservation"
-        bloquearForm();
-    }
-    else {
-        if (Names.value !== "" && isNaN(Names.value) && Phone.value > 0 && Email.value !== "" && Fecha.value !== "" && Hora.value !== "" && Personas.value > 0 && document.querySelector('input[name="comida"]:checked').value === "no") {
-            alert('Reserva completada. Elegirás tus platos en el local')
-        }
-        else {
-            alert('Completa los campos correctamente');
-        }
+function validarEmail(valor) {
+    if (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(valor)) {
+        return 1;
+    } else {
+        return 0;
     }
 }
 
-function reservar() {
+function validarFecha(fecha_value) {
+    var hoy = new Date();
+    var fechaFormulario = new Date(fecha_value);
+
+    // Comparamos solo las fechas => no las horas!!
+    hoy.setHours(0, 0, 0, 0);  // Lo iniciamos a 00:00 horas
+    fechaFormulario.setHours(fechaFormulario.getHours() + 3);  // Lo iniciamos a 00:00 horas - sumamos '3' por la diferencia horaria con UTC
+
+    if (hoy < fechaFormulario) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+function validarNombre(nombre_value) {
+    if (/^[A-z ]+$/.test(nombre_value)) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+function validarEntero(numero_value) {
+    if (Number.isInteger(Number(numero_value))) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+function formon() {
+    if (Names.value !== "" && Phone.value !== "" && Email.value !== "" && Fecha.value !== "" && Hora.value !== "" && Personas.value !== "") {
+        if (validarEmail(Email.value) === 1) {
+            if (validarFecha(Fecha.value) === 1) {
+                if (validarNombre(Names.value)) {
+                    if (Number.isInteger(Number(Phone.value))) {
+                        if (Number.isInteger(Number(Personas.value))) {
+                            if (document.querySelector('input[name="comida"]:checked').value === "si") {
+                                FormParaJS.style.display = "flex";
+                                location.href = "#reservation"
+                                bloquearForm();
+                            }
+                            else {
+                                if (document.querySelector('input[name="comida"]:checked').value === "no") {
+                                    alert('Reserva completada. Elegirás tus platos en el local');
+                                }
+                            }
+                        }
+                        else {
+                            alert("Ingrese una cantidad de personas valida");
+                            Personas.value = "";
+                        }
+                    }
+                    else {
+                        alert("Ingrese numero de telefono valido");
+                        Phone.value = "";
+                    }
+                }
+                else {
+                    alert("Ingrese un nombre valido");
+                    Names.value = "";
+                }
+            }
+            else {
+                alert("Debe reservar con al menos UN dia de anticipacion");
+                Fecha.value = "";
+            }
+        }
+        else {
+            alert("La dirección de email es incorrecta.");
+            Email.value = "";
+        }
+    }
+    else {
+        alert('Completa TODOS los campos');
+    }
+}
+function validarReserva() {
     if (Risotto.value !== "" || Hamburguesa.value !== "" || Cheeseecake.value !== "" || Wrap.value !== "" || Sushi.value !== "" || Tiramisu.value !== "") {
+        if (Risotto.value !== "" && validarEntero(Risotto.value) === 0) {
+            alert('Ingresa solo numeros enteros');
+            Risotto.value = "";
+            return 0;
+        }
+        else {
+            if (Hamburguesa.value !== "" && validarEntero(Hamburguesa.value) === 0) {
+                alert('Ingresa solo numeros enteros');
+                Hamburguesa.value = "";
+                return 0;
+            }
+            else {
+                if (Cheeseecake.value !== "" && validarEntero(Cheeseecake.value) === 0) {
+                    alert('Ingresa solo numeros enteros');
+                    Cheeseecake.value = "";
+                    return 0;
+                }
+                else {
+                    if (Wrap.value !== "" && validarEntero(Wrap.value) === 0) {
+                        alert('Ingresa solo numeros enteros');
+                        Wrap.value = "";
+                        return 0;
+                    }
+                    else {
+                        if (Sushi.value !== "" && validarEntero(Sushi.value) === 0) {
+                            alert('Ingresa solo numeros enteros');
+                            Sushi.value = "";
+                            return 0;
+                        }
+                        else {
+                            if (Tiramisu.value !== "" && validarEntero(Tiramisu.value) === 0) {
+                                alert('Ingresa solo numeros enteros');
+                                Tiramisu.value = "";
+                                return 0;
+                            }
+                            else { return 1 }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    else {
+        alert('Completa todos los campos por favor');
+        return 0;
+    }
+}
+function reservar(){
+    if(validarReserva()===1){
         Canvas.style.display = "flex";
         location.href = "#canvas";
         Total = Risotto.value * Precio_Risotto + Hamburguesa.value * Precio_Hamburguesas + Cheeseecake.value * Precio_Cheeseecake + Wrap.value * Precio_Wrap + Sushi.value * Precio_Sushi + Tiramisu.value * Precio_Tiramisu;
         PlayAnimation(animation_hand);
     }
-    else {
-        alert('Completa todos los campos por favor');
-    }
 }
+
 
 /* CANVAS SECTION */
 
