@@ -266,7 +266,7 @@ Todo el body esta en el siguiente orden:
                     <input type="number" id="menu_6" placeholder=" Cantidad de Platos">
                     <div>
                         
-                            <button value="Cerrar" onclick="cerrarform(), ActivarForm()" class="boton">Cancelar</button>
+                            <button value="Cerrar" onclick="cerrarform(); ActivarForm()" class="boton">Cancelar</button>
                             <button value="Reservar" onclick="reservar()" class="boton">Reservar</button>
                         
                     </div>
@@ -312,7 +312,7 @@ Todo el body esta en el siguiente orden:
                     <input type="radio" name="comida" value="no" id="no"><label for="no">Decidir en el Local</label>
                     <br>
                     <button type="button" value="Reservar Mesa" id="btnSend"
-                        onclick="formon(), ClearCanvas(), cerrarcanva()">Reservar Mesa</button>
+                        onclick="formon(); ClearCanvas(); cerrarcanva()">Reservar Mesa</button>
                 </div>
             </form>
         </div>
@@ -326,7 +326,7 @@ Todo el body esta en el siguiente orden:
         <div class="canvas_container">
             <canvas id="mycanvas" class="ejer" width="300px" height="500px"></canvas>
             <div class="canvas_botones">
-                <button id="cerrarcanva" onclick="cerrarcanva(),ClearCanvas(), borrarform()"
+                <button id="cerrarcanva" onclick="cerrarcanva();ClearCanvas(); borrarform()"
                     class="boton">Cerrar</button>
                 <!-- <button id="printcanvas" onclick="PrintElem()" class="boton">Imprimir Ticket</button> -->
             </div>
@@ -353,7 +353,7 @@ Todo el body esta en el siguiente orden:
                 </div>
             </div>
         </div>
-        </div>
+
 
     </footer>
     <!--FIN DEL AREA CONTACTO-->
