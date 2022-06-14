@@ -1,63 +1,3 @@
-/**
-    * Limpia los campos de los formularios
-    * @method borrarform
- **/
-/**
-    * Abre el formulario oculto (display: none -> display: flex)
-    * @method formon
-**/
-/**  
-    * Cierra la seccion canva (display: block -> display: none)
-    * @method cerrarcanva
-**/
-/**   
-    * Cierra el formulario oculto (display: flex -> display: none)
-    * @method cerrarform
-**/
-/**   
-    * Deshabilita los inputs del formulario
-    * @method Bloquearform
-**/
-/**   
-    * Habilita los inputs del formulario
-    * @method Actvarform
-**/
-/**    
-    * Abre la seccion canvas, Calcula Total, Limpia los formularios, cierra el formulario oculto.
-    * @method reservar
-**/
-/**    
-    * Limpia lo dibujado en el canvas
-    * @method ClearCanvas
-    * @param (string) unidad id de los imputs de metros, pulgadas, pies o yardas
-    * @param (number) valor el valor de los imputs de metros, pulgadas, pies y yardas
-    * @return Valor que retorna
-**/
-/**    
-    * Escribe en una posicion definida por coordenadas
-    * @method WriteText
-    * @param (string) Texto que se escribe
-    * @param (number) posicion en el eje x donde comenzara a escribir
-    * @param (number) posicion en el eje y donde comenzara a escribir
-**/
-/**    
-    * Inicia la animacion con setInterval
-    * @method PlayAnimation
-    * @param (function) Animacion que se ejecutara
-**/
-/**    
-    * Se pausa la animacion con clearInterval
-    * @method PauseAnimation
-    * @param (number) Id del setInterval que se pausara
-**/
-/**    
- * Animacion Principal del canvas
- * @method animation_hand
- /**    
-  * Dibuja el contenido del canvas
-  * @method draw
-  **/
-
 /* Precios de las comidas */
 var Precio_Risotto = 780;
 var Precio_Hamburguesas = 800;
@@ -85,6 +25,10 @@ var Boton_principal = document.getElementById("btnSend");
 /* Valor total de los platos reservadas */
 var Total = 0;
 
+/**
+    * Limpia los campos de los formularios
+    * @method borrarform()
+ **/
 function borrarform() {
     Risotto.value = "";
     Hamburguesa.value = "";
@@ -100,7 +44,11 @@ function borrarform() {
     Hora.value = "";
 }
 
-
+/**  
+    * Cierra la seccion canva (display: block -> display: none)
+    * Pausa la animacion y reestablece la posicion de los ejes x e y para la proxima animacion
+    * @method cerrarcanva()
+**/
 function cerrarcanva() {
     Canvas.style.display = "none";
     PauseAnimation();
@@ -108,11 +56,20 @@ function cerrarcanva() {
     y = 160;
 }
 
+/**   
+    * Cierra el formulario oculto (display: flex -> display: none)
+    * Vacia los campos del formulario
+    * @method cerrarform()
+**/
 function cerrarform() {
     FormParaJS.style.display = "none";
     borrarform();
 }
 
+/**   
+    * Deshabilita los inputs del formulario
+    * @method bloquearform()
+**/
 function bloquearForm() {
     Names.disabled = true;
     Phone.disabled = true;
@@ -122,6 +79,11 @@ function bloquearForm() {
     Email.disabled = true;
     Boton_principal.disabled = true;
 }
+
+/**   
+    * Habilita los inputs del formulario
+    * @method Activarform()
+**/
 function ActivarForm() {
     Names.disabled = false;
     Phone.disabled = false;
@@ -132,6 +94,12 @@ function ActivarForm() {
     Boton_principal.disabled = false;
 }
 
+/**
+ * Valida que se ingrese un Email correcto
+ * @method validarEmail()
+ * @param {string} valor El email del usuario
+ * @returns {boolean} 1: Email valido; 0: Email invalido
+ */
 function validarEmail(valor) {
     if (/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(valor)) {
         return 1;
@@ -140,6 +108,12 @@ function validarEmail(valor) {
     }
 }
 
+/**
+ * Valida que se ingrese una fecha al menos un dia posterior a la actual
+ * @method validarFecha()
+ * @param {string} fecha_value Año-Mes-Dia
+ * @returns {boolean}   1: Fecha valida; 0: Fecha invalida
+ */
 function validarFecha(fecha_value) {
     var hoy = new Date();
     var fechaFormulario = new Date(fecha_value);
@@ -156,6 +130,12 @@ function validarFecha(fecha_value) {
     }
 }
 
+/**
+ * Valida que el nombre solo sean letras y espacios
+ * @method validarNombre()
+ * @param {string} nombre_value Nombre
+ * @returns {boolean}   1: Nombre valido; 0: Nombre invalido
+ */
 function validarNombre(nombre_value) {
     if (/^[A-z ]+$/.test(nombre_value)) {
         return 1;
@@ -165,6 +145,12 @@ function validarNombre(nombre_value) {
     }
 }
 
+/**
+ * Valida que sea un numero entero
+ * @method validarEntero()
+ * @param {string} numero_value Un numero
+ * @returns {boolean}   1: El numero es entero; 0: El numero no es etero
+ */
 function validarEntero(numero_value) {
     if (Number.isInteger(Number(numero_value))) {
         return 1;
@@ -174,6 +160,10 @@ function validarEntero(numero_value) {
     }
 }
 
+/**
+    * Verifica que el formulario se haya completado correctamente y Abre el formulario oculto (display: none -> display: flex)
+    * @method formon
+**/
 function formon() {
     if (Names.value !== "" && Phone.value !== "" && Email.value !== "" && Fecha.value !== "" && Hora.value !== "" && Personas.value !== "") {
         if (validarEmail(Email.value) === 1) {
@@ -221,6 +211,12 @@ function formon() {
         alert('Completa TODOS los campos');
     }
 }
+
+/**
+ * Valida que los campos del formulario esten completados correctamente
+ * @method validarReserva()
+ * @returns {boolean} 1: Campos completados correctamente 0: Campos completados incorrectamente
+ */
 function validarReserva() {
     if (Risotto.value !== "" || Hamburguesa.value !== "" || Cheeseecake.value !== "" || Wrap.value !== "" || Sushi.value !== "" || Tiramisu.value !== "") {
         if (Risotto.value !== "" && validarEntero(Risotto.value) === 0) {
@@ -270,8 +266,13 @@ function validarReserva() {
         return 0;
     }
 }
-function reservar(){
-    if(validarReserva()===1){
+
+/**    
+    * Abre la seccion canvas, Calcula Total, Inicia la animacion.
+    * @method reservar()
+**/
+function reservar() {
+    if (validarReserva() === 1) {
         Canvas.style.display = "flex";
         location.href = "#canvas";
         Total = Risotto.value * Precio_Risotto + Hamburguesa.value * Precio_Hamburguesas + Cheeseecake.value * Precio_Cheeseecake + Wrap.value * Precio_Wrap + Sushi.value * Precio_Sushi + Tiramisu.value * Precio_Tiramisu;
@@ -289,10 +290,21 @@ var ctx = mycanvas.getContext("2d");
 var widthMax = mycanvas.width;
 var heightMax = mycanvas.height;
 
+/**    
+    * Limpia lo dibujado en el canvas
+    * @method ClearCanvas()
+**/
 function ClearCanvas() {
     mycanvas.width = mycanvas.width;
 }
 
+/**    
+    * Escribe en una posicion definida por coordenadas
+    * @method WriteText()
+    * @param {string} content Texto que se escribe
+    * @param {number} posx Posicion en el eje x donde comenzara a escribir
+    * @param {number} posy Posicion en el eje y donde comenzara a escribir
+**/
 function WriteText(content, posx, posy) {
     ctx.font = "italic small-caps bold 12px arial";
     ctx.fillStyle = "#000000";
@@ -300,18 +312,34 @@ function WriteText(content, posx, posy) {
 
 }
 
+//Variables que se utilizaran para la animacion del canvas
 var x = 0;
 var dx = 3
 var y = 160;
 var dy = 20;
 var a;
+
+/**    
+    * Inicia la animacion con setInterval
+    * @method PlayAnimation()
+    * @param {function} fname Funcion de Animacion que se ejecutara
+**/
 function PlayAnimation(fname) {
     a = setInterval(fname, 10);
 }
+
+/**    
+    * Se pausa la animacion con ClearInterval
+    * @method PauseAnimation()
+**/
 function PauseAnimation() {
     clearInterval(a);
 }
 
+/**    
+ * Animacion Principal del canvas
+ * @method animation_hand()
+ **/
 function animation_hand() {
     draw();
     ctx.clearRect(0, y, widthMax, heightMax);
@@ -319,9 +347,9 @@ function animation_hand() {
     var img = new Image();
     img.src = "img/main_logo_black.png";
     ctx.drawImage(img, 87, 59.75, 180 * 0.7, 65 * 0.7);
-    var img = new Image();
-    img.src = "img/hand.png";
-    ctx.drawImage(img, x, y, 20, 20);
+    var img2 = new Image();
+    img2.src = "img/hand.png";
+    ctx.drawImage(img2, x, y, 20, 20);
 
     if (x > mycanvas.width) {
         x = 0;
@@ -335,6 +363,11 @@ function animation_hand() {
         ActivarForm();
     }
 }
+
+ /**    
+  * Dibuja el contenido del canvas
+  * @method draw()
+  **/
 function draw() {
 
     var margenderecho = 60;

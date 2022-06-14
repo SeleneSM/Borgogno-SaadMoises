@@ -361,7 +361,6 @@ a.home-reservation-button:hover {
 @media (min-width: 768px) {
     .food-list{
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3);
     }
 }
 .mon-1 {
